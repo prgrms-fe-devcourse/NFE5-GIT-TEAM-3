@@ -599,53 +599,59 @@
 
 
     <main>
-      <section>
-          <div class="txt-wrap">
-            <h2>이주의 상품</h2>
-            <p class="btn-wrap" id="btn-wrap">
-              <button class="on" type="button" id="latest">최신순</button>
-              <button type="button" id="sold">구매순</button>
-              <button type="button" id="likes">인기순</button>
-            </p>
-          </div>
-          <ul class="productList" id="productList"></ul>
-        </section>
-
         <section class="slide">
           <div class="txt-wrap">
             <h2>이주의 상품</h2>
           </div>
           <div class="swiper productSwiper" id="productSwiper">
             <div class="swiper-wrapper">
-              <!-- 각 슬라이드 -->
             </div>
           </div>
           <div class="custom-prev">←</div>
           <div class="custom-next">→</div>
         </section>
-
-      <!-- ------------- 민석 ------------------ -->
-      <section class="recommended-products">
-        <div class="product">
-            <img class="product-img" src="https://randomuser.me/api/portraits/thumb/men/19.jpg" alt="" />
-            <div class="product-name">상품 이름</div>
-            <div class="product-price">상품 가격</div>
-          </div>
-      </section>
-      <!-- ------------- 지현 ------------------ -->
       <div class="container">
-            <section>
-                <h2 class="section-title">이주의 상품</h2>
-                <div class="product-grid" id="weeklyProducts">
-                    <!-- 이주의 상품들이 여기에 동적으로 추가됩니다 -->
+            <h2 class="section-title">추천템</h2>
+            <section class="recommended-products">
+              
+            </section>
+
+            <section class="overtime">
+                <h2 class="section-title">야근템</h2>
+                <div class="product-grid overtime">
                 </div>
             </section>
 
-            <section>
-                <h2 class="section-title">상품 리스트</h2>
-                <div class="product-grid" id="productList">
-                    <!-- 상품들이 여기에 동적으로 추가됩니다 -->
+            <section class="equipment">
+                <h2 class="section-title">장비템</h2>
+                <div class="product-grid equipment">
                 </div>
+            </section>
+            <section class="emotion">
+                <h2 class="section-title">감성템</h2>
+                <div class="product-grid emotion">
+                </div>
+            </section>
+            <section class="fashion">
+                <h2 class="section-title">패션템</h2>
+                <div class="product-grid fashion">
+                </div>
+            </section>
+            <section class="etc">
+                <h2 class="section-title">기타</h2>
+                <div class="product-grid etc">
+                </div>
+            </section>
+            <section class="all-products">
+              <div class="txt-wrap">
+                <h2>전체 상품</h2>
+                <p class="btn-wrap" id="btn-wrap">
+                  <button class="on" type="button" id="latest">최신순</button>
+                  <button type="button" id="sold">구매순</button>
+                  <button type="button" id="likes">인기순</button>
+                </p>
+              </div>
+              <ul class="productList" id="productList"></ul>
             </section>
         </div>
     </main>

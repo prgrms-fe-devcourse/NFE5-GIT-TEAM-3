@@ -1,66 +1,64 @@
-
-import { weeklyProducts, productList } from './jh.js'
+import { getStorage } from "../storage.js";
+import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
 import { createForm, handleOpenSurvey, initSurvey } from '../developer-survey/developer-survey.js'
 
-function createProductCard(product) {
-    return `
+const KEY = 'products';
+
+function getProductList(){
+  const data = getStorage(KEY);
+  return data;
+}
+
+function renderItem({id, name, price, img, txt, likes, reviews, category}) {
+    const parent = category;
+
+    parent.forEach((p) => {
+        const parentNode = document.querySelector(`div.${p}`);
+
+        const div = document.createElement('div');
+        const template = /* html */`
         <div class="product-card">
             <div class="product-image">
-                <img src="${product.img}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+                <img src="${img}" alt="${name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
                 <div class="action-icons">
-                    <button class="action-btn wishlist-btn" onclick="addToWishlist(${product.id}, '${product.name}')">♥</button>
-                    <button class="action-btn cart-btn" onclick="addToCart(${product.id}, '${product.name}')">🛒</button>
-                    <button class="action-btn buy-btn" onclick="buyNow(${product.id}, '${product.name}')">💳</button>
+                    <button class="action-btn wishlist-btn">♥</button>
+                    <button class="action-btn cart-btn">🛒</button>
+                    <button class="action-btn buy-btn">💳</button>
                 </div>
             </div>
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <p class="product-description">${product.description}</p>
-                <div class="product-price-card">${product.price}</div>
-                <div class="product-rating">
-                    <span class="stars">★★★★★</span>
-                    <span>${product.rating}</span>
-                    <span>(${product.reviews})</span>
+            <div class="info">
+                <span class="brand">${name}</span>
+                <p class="txt">${txt}</p>
+                <span class="price">${price.toLocaleString()}원</span>
+                <div class="rating">
+                    <img src="./product-sort/img/star.on.png" alt="평점이미지" />
+                    <span>${likes.toFixed(1)}</span>
+                    <span>(${reviews})</span>
                 </div>
             </div>
         </div>
-    `;
+        `;
+
+        div.insertAdjacentHTML('beforeend',template);
+        parentNode.insertAdjacentElement('beforeend', div);
+
+        div.querySelector('.wishlist-btn').addEventListener('click', () => addToWishlist(id, name));
+        div.querySelector('.cart-btn').addEventListener('click', () => addToCart(id, name));
+        div.querySelector('.buy-btn').addEventListener('click', () => buyNow(id, name));
+    });
 }
 
-// 알림 표시 함수
-function showNotification(message, type = 'success') {
-    const notification = document.getElementById('notification');
-    notification.textContent = message;
-    notification.className = `notification ${type}`;
-    notification.classList.add('show');
 
-    setTimeout(() => {
-        notification.classList.remove('show');
-    }, 3000);
+function createProductList(){
+    const products = getProductList();
+    products.forEach((product)=>{
+        renderItem(product);
+    })
 }
-
-// 찜하기 기능
-function addToWishlist(productId, productName) {
-    showNotification(`${productName} 찜하기 완료!`, 'success');
-}
-
-// 장바구니 추가 기능
-function addToCart(productId, productName) {
-    showNotification(`${productName} 장바구니 추가 완료!`, 'info');
-}
-
-// 바로결제 기능
-function buyNow(productId, productName) {
-    showNotification(`${productName} 결제 창으로 이동합니다`, 'warning');
-}
-
 
 
 // 페이지 로드 시 상품 렌더링
 document.addEventListener('DOMContentLoaded', function () {
-    const weeklyContainer = document.getElementById('weeklyProducts');
-    const productContainer = document.getElementById('productList');
-
     // 설문조사 폼 생성
     createForm();
 
@@ -70,13 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 초기화
     initSurvey();
 
-    // 이주의 상품 렌더링
-    weeklyProducts.forEach(product => {
-        weeklyContainer.innerHTML += createProductCard(product);
-    });
-
-    // 상품 리스트 렌더링
-    productList.forEach(product => {
-        productContainer.innerHTML += createProductCard(product);
-    });
+    // 영역별 상품 렌더링
+    createProductList();
 });
+
