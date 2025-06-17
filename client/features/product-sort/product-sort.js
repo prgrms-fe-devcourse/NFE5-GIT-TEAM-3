@@ -119,6 +119,7 @@ function renderProductList(data) {
       </div>
     `;
     list.appendChild(li);
+
   });
 }
 
@@ -135,6 +136,7 @@ function sortProducts(type) {
   }
 
   renderProductList(sorted);
+  card.className = 'product-card';
 }
 
 // 🔹 [5] 버튼 클릭 이벤트 처리
@@ -172,6 +174,7 @@ function slideProductList(data) {
     `;
 
     wrapper.appendChild(slideEl);
+    
   });
 
   // Swiper 슬라이드 초기화
