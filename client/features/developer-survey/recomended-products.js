@@ -8,7 +8,7 @@
  * survey 결과 값이 바뀔때마다 재 추천해줘야함
  */
 
-import { getStorage, setStorage } from "./storage.js";
+import { getStorage, setStorage } from "../storage.js";
 const SURVEY_KEY = 'survey';
 const PRODUCTS_KEY = 'products';
 

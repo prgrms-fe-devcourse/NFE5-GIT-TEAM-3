@@ -1,3 +1,5 @@
+import './features/products.js';
+import './features/storage.js';
 import './features/developer-survey/developer-survey.js';
 import './features/developer-survey/example-products.js';
 import './features/developer-survey/recomended-products.js';
