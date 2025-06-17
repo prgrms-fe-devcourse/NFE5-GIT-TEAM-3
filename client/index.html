@@ -8,17 +8,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="http://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./features/product-sort/product-sort.css" />
     <link rel="stylesheet" href="./features/easter-egg/easter-egg.css" />
     <link rel="stylesheet" href="./features/developer-survey/developer-survey.css" />
     <link rel="stylesheet" href="./features/navigation/navigation.css" />
     <link rel="stylesheet" href="./features/rendering/rendering.css" />
-    
+      
 
 
-    
-    <link rel="stylesheet" href="http://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="swiper.js" defer></script>
     <script type="module" src="./main.js" ></script>
 </head>
 <body>
@@ -597,6 +601,32 @@
 
 
     <main>
+      <section>
+          <div class="txt-wrap">
+            <h2>이주의 상품</h2>
+            <p class="btn-wrap" id="btn-wrap">
+              <button class="on" type="button" id="latest">최신순</button>
+              <button type="button" id="sold">구매순</button>
+              <button type="button" id="likes">인기순</button>
+            </p>
+          </div>
+          <ul class="productList" id="productList"></ul>
+        </section>
+
+        <section class="slide">
+          <div class="txt-wrap">
+            <h2>이주의 상품</h2>
+          </div>
+          <div class="swiper productSwiper" id="productSwiper">
+            <div class="swiper-wrapper">
+              <!-- 각 슬라이드 -->
+            </div>
+          </div>
+          <div class="custom-prev">←</div>
+          <div class="custom-next">→</div>
+        </section>
+
+        <!-- ------------- 민석 ------------------ -->
       <section class="recommended-products">
         <div class="product">
             <img class="product-img" src="https://randomuser.me/api/portraits/thumb/men/19.jpg" alt="" />
