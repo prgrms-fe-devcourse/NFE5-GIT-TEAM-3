@@ -1,0 +1,98 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.side-menu {
+  position: fixed;
+  left: -175px;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #403e3e;
+  color: white;
+  transition: left 0.3s ease-in-out;
+  z-index: 100;
+  padding: 20px;
+}
+
+.side-menu.open {
+  left: 0px;
+}
+
+.side-menu > .logo-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.side-menu > .logo-bar > button {
+  background-color: transparent !important;
+  border: none;
+  cursor: pointer;
+}
+
+.side-menu > .logo-bar > .logo {
+  width: 150px;
+  height: 30px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul > .li0 > .chevron1,
+ul > .li2 > .chevron1 {
+  width: 14px;
+  height: 8px;
+}
+
+.li0 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  > svg {
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.li1 {
+  margin-left: 20px;
+}
+
+.li1 > a > .chevron2,
+.li1 > .chevron2 {
+  width: 8px;
+  height: 14px;
+}
+
+.li1 > a,
+.li1,
+.li2 {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.li1 > a svg,
+.li1 > svg,
+.li2 > svg {
+  width: 20px;
+  height: 18px;
+  display: block;
+}
+
+.li1 > a span,
+.li2 > span {
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
+}
