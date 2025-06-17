@@ -95,7 +95,7 @@ const products = [
 ];
 
 // 🔹 [2] DOM 요소 선택
-const list = document.getElementById("productList");
+const list = document.getElementById("productItems");
 const buttons = document.querySelectorAll("#btn-wrap button");
 const slide = document.getElementById("productSwiper");
 
