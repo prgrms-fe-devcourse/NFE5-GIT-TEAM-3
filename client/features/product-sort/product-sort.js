@@ -1,3 +1,5 @@
+/* global Swiper */
+
 // 🔹 [1] 상품 데이터 정의
 const products = [
   {
