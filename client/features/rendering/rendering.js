@@ -1,6 +1,7 @@
 
 import { weeklyProducts, productList } from './jh.js'
 import { createForm, handleOpenSurvey, initSurvey } from '../developer-survey/developer-survey.js'
+import { handleMeme, hoverDetection } from '../easter-egg/easter-egg.js';
 
 function createProductCard(product) {
     return `
@@ -79,4 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
     productList.forEach(product => {
         productContainer.innerHTML += createProductCard(product);
     });
+
+
+    hoverDetection();
+    handleMeme();
 });
