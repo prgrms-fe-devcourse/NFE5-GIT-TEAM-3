@@ -184,6 +184,7 @@ function slideProductList(data) {
     },
     loop: true,
   });
+  
 }
 
 // 🔹 [8] 초기에 슬라이드 상품 표시
