@@ -1,0 +1,32 @@
+section {
+  width: 100%;
+  max-width: 1520px;
+  margin: auto;
+  padding: 0 20px;
+  padding-top: 140px;
+}
+:root {
+  --color-bg: #FFFFFF;
+  --color-text: #222;
+  --color-sub-text: #767676;
+  --color-primary: #007BFF;
+  --color-secondary: #6C757D;
+  --color-accent: #FF6B6B;
+  --color-border: #DDDDDD;
+  --font-family: "Pretendard", sans-serif;
+  --transition-speed: 0.3s;
+}
+@font-face {
+  font-family: "D2Coding";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/Pretendard-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}

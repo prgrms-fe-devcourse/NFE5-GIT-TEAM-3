@@ -1,0 +1,19 @@
+{
+  "name": "devmart2",
+  "version": "1.0.0",
+  "description": "programmers 1-3팀 gitfilled 3차 프로젝트 기획 아카이빙",
+  "main": "main.js",
+  "scripts": {
+    "dev": "live-server client --host=localhost --port=5500 --no-browser"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+  "@eslint/js": "9.27.0",
+  "eslint": "9.27.0",
+  "globals": "16.2.0",
+  "live-server": "1.2.2",
+  "prettier": "3.5.3"
+  }
+}
