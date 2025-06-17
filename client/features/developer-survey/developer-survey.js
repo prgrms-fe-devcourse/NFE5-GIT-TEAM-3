@@ -21,7 +21,7 @@ const KEY = 'survey';
 /**
  * 설문조사 폼 활성화 이벤트 핸들러
  */
-function handleOpenSurvey(){
+export function handleOpenSurvey(){
     surveyButton.addEventListener('click',()=>{
         surveyForm.classList.remove('hidden');
         // surveyForm.style.opacity = '1';
@@ -181,7 +181,7 @@ function createCheckbox(parent, option){
 /**
  * 설문조사 폼 생성
  */
-function createForm(){
+export function createForm(){
     const role = ['frontend','backend','ai','publisher'];
     const workEnvironment = ['home','office','cafe'];
     const workShift = ['day','night'];
@@ -206,7 +206,7 @@ initSurvey();
  * - 저장된 결과 불러오기
  * - 처음이라면 빈 배열 생성
  */
-function initSurvey(){
+export function initSurvey(){
     const data = getStorage(KEY);
     if(!data) {
         setStorage(KEY,{role:[], workEnvironment:[], workShift:[]});

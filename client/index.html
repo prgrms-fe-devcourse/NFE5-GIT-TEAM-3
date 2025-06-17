@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./features/easter-egg/easter-egg.css" />
     <link rel="stylesheet" href="./features/developer-survey/developer-survey.css" />
     <link rel="stylesheet" href="./features/navigation/navigation.css" />
+    <link rel="stylesheet" href="./features/rendering/rendering.css" />
     
 
 
@@ -604,12 +605,24 @@
           </div>
       </section>
       <!-- ------------- 지현 ------------------ -->
-      <section class="list-01"></section>
-      <section class="list-02"></section>
-      <section class="list-03"></section>
-      <section class="list-04"></section>
+      <div class="container">
+            <section>
+                <h2 class="section-title">이주의 상품</h2>
+                <div class="product-grid" id="weeklyProducts">
+                    <!-- 이주의 상품들이 여기에 동적으로 추가됩니다 -->
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">상품 리스트</h2>
+                <div class="product-grid" id="productList">
+                    <!-- 상품들이 여기에 동적으로 추가됩니다 -->
+                </div>
+            </section>
+        </div>
     </main>
     <footer></footer>
+    <div id="notification" class="notification"></div>
     <audio id="meme-audio" src="./assets/sounds/효과음.mp3"></audio>
   </body>
 </html>
