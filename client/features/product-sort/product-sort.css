@@ -1,4 +1,8 @@
-
+/* reset.css 또는 전역 CSS에 추가 */
+html, body {
+  margin: 0;
+  padding: 0;
+}
 /* 🔹 타이틀 & 버튼 영역 */
 .txt-wrap {
   display: flex;
@@ -117,12 +121,13 @@ figure.img {
 
 .swiper-wrapper {
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .swiper-slide {
   width: 100%;
   flex-shrink: 0;
-  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -159,8 +164,89 @@ figure.img {
 }
 
 
-@media screen and (max-width:1140px){
 
+@media screen and (max-width:1200px){
+
+  ul.productList {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
   
+  figure.img {
+    height: 180px;
+    margin-bottom: 16px;
+  }
+
+.txt-wrap h2 {
+  font-size: 26px;
+}
+
+.info .brand {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.info .txt {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.info .price {
+  font-size: 16px;
+}
+
+.info .rating {
+  margin-top: 6px;
+}
+
+.btn-wrap button {
+  padding: 6px 14px;
+  font-size: 13px;
+  margin-left: 4px;
+}
+
+.swiper-slide figure.img {
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+
+}
+
+
+@media screen and (max-width:640px){
+
+ul.productList {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+}
+
+  figure.img {
+    height: 160px;
+    margin-bottom: 16px;
+  }
+
+.txt-wrap h2 {
+  font-size: 22px;
+}
+
+.info .brand {
+  margin-bottom: 4px;
+}
+
+.info .txt {
+  margin-bottom: 6px;
+}
+
+.info .price {
+  font-size: 15px;
+}
+
+.swiper-slide figure.img {
+  height: 160px;
+  margin-bottom: 20px;
+}
+
 
 }

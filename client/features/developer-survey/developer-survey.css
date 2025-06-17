@@ -46,14 +46,13 @@ button.survey-button {
 
 
 .survey-form{
-    position: absolute;
+    position: fixed;
     top: 60px;
-
-    width: 700px;
+    width: 800px;
     padding: 40px;
     background-color: rgb(248, 248, 248);
-
     border-radius: 10px;
+    z-index: 10;
 }
 
 
@@ -61,7 +60,6 @@ button.survey-button {
 button.survey-close {
     position: absolute;
     right: 40px;
-
     width: 70px;
     height: 30px;
     margin-bottom: 20px;
@@ -70,7 +68,6 @@ button.survey-close {
 
 button.survey-submit {
     position: absolute;
-
     width: 70px;
     height: 30px;
 
@@ -92,7 +89,7 @@ button.survey-submit {
 .workShift 
 {
     display: grid;
-    grid-template-columns: repeat(5,120px);
+    grid-template-columns: repeat(5,140px);
     grid-template-rows: repeat(1,120px);
     gap: 25px;
     margin-bottom: 40px;
