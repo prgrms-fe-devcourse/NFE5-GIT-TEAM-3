@@ -8,7 +8,7 @@
  * 로컬에 저장이 됐다면, 추천 section에 아이템이 보인다 -> render
  * 로컬에 내역이 없다면 추천 section에 아이템이 안보인다 -> init
  */
-import { setStorage, getStorage } from "./storage.js";
+import { setStorage, getStorage } from "../storage.js";
 import { createRecommendedProducts } from "./recomended-products.js"
 
 const surveyButton = document.querySelector('.survey-button');
@@ -213,10 +213,3 @@ export function initSurvey(){
     }
     createRecommendedProducts();
 }
-
-
-
-
-
-
-
