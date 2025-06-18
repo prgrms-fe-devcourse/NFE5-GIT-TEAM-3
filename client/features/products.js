@@ -29,6 +29,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews: 432,
+        category : ['overtime', 'emotion']
 
     },
     {
@@ -42,6 +44,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews: 678,
+        category : ['fashion','etc']
 
     },
     {
@@ -55,6 +59,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['etc']
 
     },
     {
@@ -68,6 +74,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['equipment', 'fashion','etc']
 
     },
     {
@@ -81,6 +89,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['overtime','fashion','etc']
 
     },
     //--------------------------------------
@@ -95,6 +105,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['fashion','etc']
 
     },
     {
@@ -108,6 +120,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['overtime']
 
     },
     {
@@ -121,6 +135,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['overtime', 'emotion']
 
     },
     {
@@ -134,7 +150,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
-
+        reviews : 432,
+        category : ['emotion']
     },
     {
         id : 10,
@@ -147,7 +164,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
-
+        reviews : 432,
+        category : ['overtime', 'emotion', 'equipment', 'fashion','etc']
     },
     {
         id : 11,
@@ -160,7 +178,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
-
+        reviews : 432,
+        category : ['overtime', 'emotion', 'equipment', 'fashion','etc']
     },
     {
         id : 12,
@@ -173,7 +192,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
-
+        reviews : 432,
+        category : ['overtime', 'emotion', 'equipment', 'fashion','etc']
     },
     {
         id : 13,
@@ -186,7 +206,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
-
+        reviews : 432,
+        category : ['overtime', 'emotion', 'equipment', 'fashion','etc']
     },
     {
         id : 14,
@@ -199,7 +220,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
-
+        reviews : 432,
+        category : ['emotion', 'equipment']
     },
     {
         id : 15,
@@ -212,6 +234,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9, 
+        reviews : 432,
+        category : ['emotion', 'equipment']
     },
     {
         id : 16,
@@ -224,6 +248,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['emotion', 'equipment']
 
     },
     {
@@ -237,6 +263,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['emotion', 'equipment']
 
     },
     {
@@ -250,6 +278,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9, 
+        reviews : 432,
+        category : ['emotion', 'equipment']
     },
     {
         id : 19,
@@ -262,6 +292,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['fashion','etc']
 
     },
     {
@@ -275,6 +307,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['fashion','etc']
 
     },
     {
@@ -288,6 +322,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9, 
+        reviews : 432,
+        category : ['fashion','etc']
     },
     {
         id : 22,
@@ -300,6 +336,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['fashion','etc']
 
     },
     {
@@ -313,6 +351,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['fashion','etc']
 
     },
     {
@@ -326,6 +366,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9, 
+        reviews : 432,
+        category : ['fashion','etc']
     },
     {
         id : 25,
@@ -338,6 +380,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9, 
+        reviews : 432,
+        category : ['fashion','etc']
     },
     {
         id : 26,
@@ -350,6 +394,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['fashion','etc']
 
     },
     {
@@ -363,6 +409,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9, 
+        reviews : 432,
+        category : ['fashion','etc']
     },
 
 
@@ -378,6 +426,8 @@ const products = [
         txt : "개발자들을 위한 최고의 선택",
         sold : 1,
         likes: 4.9,
+        reviews : 432,
+        category : ['fashion','etc']
 
     }
 

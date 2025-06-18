@@ -9,6 +9,9 @@
  */
 
 import { getStorage, setStorage } from "../storage.js";
+import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
+import { handleMeme, hoverDetection } from "../easter-egg/easter-egg.js";
+
 const SURVEY_KEY = 'survey';
 const PRODUCTS_KEY = 'products';
 
@@ -49,39 +52,49 @@ export function createRecommendedProducts() {
     recommendedSection.replaceChildren();
     const recommendedProducts = getRecomdedProducts();
     console.log(recommendedProducts);
+
+    
     recommendedProducts.forEach((recommendedProduct)=>{
-        const {id, name, price, img} = recommendedProduct;
-        // const product = document.createElement('div');
-
-        // product.setAttribute('class','product');
-
-        // const productImg = document.createElement('img');
-        // productImg.setAttribute('class','product-img');
-        // productImg.setAttribute('src', img);
-        // productImg.setAttribute('alt', `${name} 상품 사진`);
-
-        // const productName = document.createElement('div');
-        // productName.setAttribute('class','product-name');
-        // productName.textContent = name;
-
-        // const productPrice = document.createElement('div');
-        // productPrice.setAttribute('class','product-price');
-        // productPrice.textContent = price;
-
-        // product.append(productImg, productName, productPrice);
-        // recommendedSection.append(product);
-        const template = /*html*/`
-            <div class="product">
-                <img class="product-img" src="${img}" alt="${name} 상품 사진" />
-                <div class="product-name">${name}</div>
-                <div class="product-price">${price}</div>
+        const {id, name, price, img, txt, likes, reviews} = recommendedProduct;
+        const div = document.createElement('div');
+        const template = /* html */`
+        <div class="product-card">
+            <div class="product-image">
+                <img src="${img}" alt="${name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+                <div class="action-icons">
+                    <button class="action-btn wishlist-btn">♥</button>
+                    <button class="action-btn cart-btn">🛒</button>
+                    <button class="action-btn buy-btn">💳</button>
+                </div>
             </div>
+            <div class="info">
+                <span class="brand">${name}</span>
+                <p class="txt">${txt}</p>
+                <span class="price">${price.toLocaleString()}원</span>
+                <div class="rating">
+                <img src="./product-sort/img/star.on.png" alt="평점이미지" />
+                <span>${likes.toFixed(1)}</span>
+                <span>(${reviews})</span>
+            </div>
+        </div>
         `
-        recommendedSection.insertAdjacentHTML('beforeend',template);
+        div.insertAdjacentHTML('beforeend',template);
+        recommendedSection.insertAdjacentElement('beforeend', div);
+
+        div.querySelector('.wishlist-btn').addEventListener('click', () => addToWishlist(id, name));
+        div.querySelector('.cart-btn').addEventListener('click', () => addToCart(id, name));
+        div.querySelector('.buy-btn').addEventListener('click', () => buyNow(id, name));
     })
 }
 
+
+
+
+
+
 initRecommendedProducts();
+handleMeme();
+hoverDetection();
 
 /**
  * 추천상품 init
