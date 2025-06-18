@@ -10,6 +10,8 @@
 
 import { getStorage, setStorage } from "../storage.js";
 import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
+import { handleMeme, hoverDetection } from "../easter-egg/easter-egg.js";
+
 const SURVEY_KEY = 'survey';
 const PRODUCTS_KEY = 'products';
 
@@ -91,6 +93,8 @@ export function createRecommendedProducts() {
 
 
 initRecommendedProducts();
+handleMeme();
+hoverDetection();
 
 /**
  * 추천상품 init

@@ -47,7 +47,7 @@ function renderTestProducts() {
 }
 
 
-function hoverDetection(){
+export function hoverDetection(){
   const products = document.querySelectorAll('.product-card');
 
   products.forEach(card => {
@@ -63,7 +63,7 @@ function hoverDetection(){
 }
 
 
-function handleMeme(){
+export function handleMeme(){
   document.addEventListener('keydown', (e) => {
   if (e.key === 'd'&& currentHover) {
     const memeText = memes[Math.floor(Math.random()*memes.length)];

@@ -1,6 +1,8 @@
 /* global Swiper */
 import { getStorage } from "../storage.js";
 import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
+import { handleMeme, hoverDetection } from "../easter-egg/easter-egg.js";
+
 const KEY = 'products';
 
 // 🔹 [2] DOM 요소 선택
@@ -119,3 +121,5 @@ function slideProductList(data) {
 
 // 🔹 [8] 초기에 슬라이드 상품 표시
 slideProductList(getProductList());
+handleMeme();
+hoverDetection();

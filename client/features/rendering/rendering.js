@@ -1,6 +1,7 @@
 import { getStorage } from "../storage.js";
 import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
 import { createForm, handleOpenSurvey, initSurvey } from '../developer-survey/developer-survey.js'
+import { handleMeme, hoverDetection } from "../easter-egg/easter-egg.js";
 
 const KEY = 'products';
 
@@ -70,5 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 영역별 상품 렌더링
     createProductList();
+
+    handleMeme();
+
+    hoverDetection();
 });
 
