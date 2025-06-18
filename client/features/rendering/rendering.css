@@ -233,6 +233,12 @@
     .product-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+
     }
     
     .product-card:hover .action-icons {
