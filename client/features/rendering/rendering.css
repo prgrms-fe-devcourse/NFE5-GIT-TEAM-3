@@ -236,6 +236,12 @@
 @media (max-width: 768px) {
     .product-grid {
         gap: 15px;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+
     }
     
     .product-card:hover .action-icons {

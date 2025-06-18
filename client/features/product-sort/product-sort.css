@@ -201,43 +201,15 @@ figure.img {
   right: 0;
 }
 
-@media screen and (max-width:1024px){
-
+@media (max-width: 768px) {
   ul.productList {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      overflow-x: hidden;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
 
-}
-
-.txt-wrap {
-  margin-bottom: 20px;
-}
-
-.txt-wrap h2 {
-  font-size: 26px;
-}
-
-
-
-}
-
-
-@media screen and (max-width:640px){
-
-  ul.productList {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-
-}
-
-.txt-wrap {
-  margin-bottom: 1px;
-}
-
-.txt-wrap h2 {
-  font-size: 22px;
-}
-
-
-
+  }
 }
