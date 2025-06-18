@@ -1,21 +1,29 @@
+import { setStorage } from "./storage.js";
+const KEY = 'products'
+
 /**
- * id : number
- * name : string
- * price : number
- * img : string
- * recommendedRole : string, array
- * recommendedEnv : string, array
- * recommendedShift : string, array
+ * @typedef {Object} Product
+ * @property {string} id - 상품 아이디
+ * @property {string} name - 상품 이름
+ * @property {number} price - 상품 가격
+ * @property {string[]} recommendedRole - 추천 직군
+ * @property {string[]} recommendedEnv - 추천 근무 환경
+ * @property {string[]} recommendedShift - 추천 근무 시간대
+ * @property {string} txt - 설명 텍스트
+ * @property {number} sold - 판매 수
+ * @property {number} likes - 좋아요 수
+ * @property {number} reviews - 리뷰 수
+ * @property {string[]} category 상품 분류
  */
 
 /**
- * recommendedRole : ['ai','publisher']
+ * 옵션
+ * recommendedRole : ['frontend','backend','ai','publisher']
  * recommendedEnv : ['home','office','cafe']
  * recommendedShift : ['day','night']
  * category : ['overtime', 'emotion', 'equipment', 'fashion','etc']
  */
-import { setStorage } from "./storage.js";
-const KEY = 'products'
+
 
 const products = [
     {

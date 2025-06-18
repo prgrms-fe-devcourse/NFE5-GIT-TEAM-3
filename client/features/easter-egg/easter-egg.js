@@ -1,7 +1,10 @@
-import * as testProducts from './testProducts.js';
-
-
-
+/**
+ * 개발자 관련 밈 문자열 목록
+ * 
+ * - 랜덤 밈 표시에 사용
+ * 
+ * @type {string[]}
+ */
 const memes = [
   '이게 안 되네…? 이게 되네…?',
   '제 pc 에서는 됩니다.',
@@ -15,39 +18,19 @@ const memes = [
   'html도 프로그래밍 언어입니다',
 ];
 
+/**
+ * 현재 마우스가 hover 중인 상품 카드 요소 (없으면 null)
+ * @type {HTMLElement | null}
+ */
 let currentHover = null;
 
 
-
-
-//상품들을 반복해서 화면에 렌더링
-function renderTestProducts() {
-  const container = document.createElement('div');
-  container.id = 'product-container';
-  document.body.appendChild(container);
-
-
-  Object.values(testProducts).forEach(product => {
-    const section = document.querySelector(`section.${product.category}`);
-    if (!section) return; // 해당 섹션 없으면 무시
-
-    const card = document.createElement('div');
-    card.className = 'product-card';
-    card.dataset.id = product.id;
-    card.innerHTML = `
-      <img src="${product.img}" alt="${product.name}" />
-      <p>${product.name}</p>
-    `;
-
-    section.appendChild(card); // 해당 섹션에 카드 추가
-  });
-
-  console.log('렌더링 시작');
-  
-}
-
-
-export function hoverDetection(){
+/**
+ * 상품 카드에 마우스 hover 이벤트를 등록하여 현재 hover 중인 상품을 추적
+ * 
+ * @returns {void}
+ */
+export function handlehoverDetection(){
   const products = document.querySelectorAll('.product-card');
 
   products.forEach(card => {
@@ -62,7 +45,16 @@ export function hoverDetection(){
   })
 }
 
-
+/**
+ * 개발자 밈 출력 핸들러
+ *
+ * - 사용자가 `.product-card` 위에 마우스를 올린 상태에서 키보드 'd' 키를 누르면 밈을 출력
+ * - 기존 밈이 있으면 제거 후 새로운 밈을 보여줌
+ * - 밈은 2초 후 자동으로 사라짐
+ * - 밈 출력 시 효과음도 함께 재생됨
+ *
+ * @returns {void}
+ */
 export function handleMeme(){
   document.addEventListener('keydown', (e) => {
   if (e.key === 'd'&& currentHover) {
@@ -90,7 +82,11 @@ export function handleMeme(){
 });
 }
 
-//효과음 재생 함수
+/**
+ * 개발자 밈 출력 시 효과음을 재생합니다.
+ *
+ * @returns {void}
+ */
 function playMemeSound(){
   const audio = document.getElementById('meme-audio');
 
@@ -98,11 +94,12 @@ function playMemeSound(){
   audio.play();
 }
 
-
-renderTestProducts();
-hoverDetection();
+handlehoverDetection();
 handleMeme();
 
+/**
+ * 콘솔 이스터에그
+ */
 console.log('%c。　♡ 。　　♡。　　♡', 'color: pink; font-size: 16px;');
 console.log('%c♡。　＼　　｜　　／。　♡', 'color: orange; font-size: 16px;');
 console.log('%c\tdevMart 짱', 'color: gold; font-size: 18px; font-weight: bold;');
