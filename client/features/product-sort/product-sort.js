@@ -107,16 +107,34 @@ function slideProductList(data) {
     wrapper.appendChild(slideEl);
   });
 
-  // Swiper 슬라이드 초기화
-  const swiper = new Swiper(".productSwiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: ".custom-next",
-      prevEl: ".custom-prev",
+// Swiper 슬라이드 초기화
+const swiper = new Swiper(".productSwiper", {
+  loop: true, // 무한 루프
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".custom-next",
+    prevEl: ".custom-prev",
+  },
+
+  // ✅ 반응형 설정
+  breakpoints: {
+    // 0 ~ 639px
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
-    loop: true,
-  });
+    // 640px ~ 1023px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // 1024px 이상
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    }
+  }
+});
 }
 
 // 🔹 [8] 초기에 슬라이드 상품 표시
