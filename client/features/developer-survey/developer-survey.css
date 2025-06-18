@@ -34,9 +34,39 @@
 }
 
 button.survey-button {
-    position: absolute;
-    top: 20px;
+  position: absolute;
+  bottom: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 156px;
+  height: 56px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  overflow: hidden; 
+  transition: color 0.3s ease;
+  z-index: 1;
+}
 
+button.survey-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #222; 
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+button.survey-button:hover::before {
+  left: 0;
+}
+
+button.survey-button:hover {
+  color: #fff;
 }
 
 .survey-form.hidden{
@@ -46,22 +76,19 @@ button.survey-button {
 
 
 .survey-form{
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     top: 60px;
-
     width: 700px;
     padding: 40px;
     background-color: rgb(248, 248, 248);
-
     border-radius: 10px;
 }
-
 
 
 button.survey-close {
     position: absolute;
     right: 40px;
-
     width: 70px;
     height: 30px;
     margin-bottom: 20px;
@@ -70,21 +97,16 @@ button.survey-close {
 
 button.survey-submit {
     position: absolute;
-
     width: 70px;
     height: 30px;
 
 }
-
-
 
 .survey-form h2{
     font-weight: 500;
     font-size: 25px;
     margin-bottom: 20px;
 }
-
-
 
 
 .role,
@@ -98,8 +120,6 @@ button.survey-submit {
     margin-bottom: 40px;
     
 }
-
-
 .role-item,
 .workEnvironment-item,
 .workShift-item 

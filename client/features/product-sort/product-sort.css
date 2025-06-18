@@ -1,4 +1,48 @@
 
+
+.visual{
+  width: 100%;
+  height: 720px;
+  background-color: #ddd;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.visual .txt{
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  translate:-50% -50%;
+  text-align: center;
+}
+
+.visual .txt span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #767676;
+  line-height: 1.6;           
+  letter-spacing: 0.3px;    
+  margin-bottom: 4px;  
+}
+
+.visual .txt h3 {
+  font-size: 46px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.3;           
+  letter-spacing: -0.5px;     
+   margin-bottom: 6px; 
+}
+
+.visual .txt p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #767676;
+  line-height: 1.7;           
+  letter-spacing: 0.2px;      
+}
+
+
 /* 🔹 타이틀 & 버튼 영역 */
 .txt-wrap {
   display: flex;
@@ -112,7 +156,6 @@ figure.img {
 
 .swiper {
   width: 100%;
-  padding: 20px 0;
 }
 
 .swiper-wrapper {
@@ -156,4 +199,45 @@ figure.img {
 
 .custom-next {
   right: 0;
+}
+
+@media screen and (max-width:1024px){
+
+  ul.productList {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+}
+
+.txt-wrap {
+  margin-bottom: 20px;
+}
+
+.txt-wrap h2 {
+  font-size: 26px;
+}
+
+
+
+}
+
+
+@media screen and (max-width:640px){
+
+  ul.productList {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+}
+
+.txt-wrap {
+  margin-bottom: 1px;
+}
+
+.txt-wrap h2 {
+  font-size: 22px;
+}
+
+
+
 }
