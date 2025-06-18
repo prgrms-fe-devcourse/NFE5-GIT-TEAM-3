@@ -35,10 +35,10 @@
 
 button.survey-button {
   position: absolute;
-  bottom: 40px;
+  bottom: 55px;
   font-size: 16px;
   font-weight: 500;
-  width: 156px;
+  width: 166px;
   height: 56px;
   border-radius: 6px;
   border: 1px solid #ddd;
@@ -56,7 +56,7 @@ button.survey-button::before {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: #222; 
+  background-color: #504FE3; 
   transition: left 0.4s ease;
   z-index: -1;
 }
@@ -75,152 +75,170 @@ button.survey-button:hover {
 }
 
 
-.survey-form{
-    position: fixed;
-    z-index: 10;
-    top: 60px;
-    width: 700px;
-    padding: 40px;
-    background-color: rgb(248, 248, 248);
-    border-radius: 10px;
+.survey-form {
+  position: fixed;
+  top: 6%;
+  width: 700px;
+  padding: 30px; 
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
-
 
 button.survey-close {
-    position: absolute;
-    right: 40px;
-    width: 70px;
-    height: 30px;
-    margin-bottom: 20px;
-
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 72px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background-color: #eee;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+button.survey-close:hover {
+  background-color: #ccc;
+}
+
+/* 제출 버튼 */
 button.survey-submit {
-    position: absolute;
-    width: 70px;
-    height: 30px;
-
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: #504FE3;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.survey-form h2{
-    font-weight: 500;
-    font-size: 25px;
-    margin-bottom: 20px;
+button.survey-submit:hover {
+  background-color: #504FE3;
 }
 
+.survey-form h2 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 20px;
+}
 
+/* 항목 묶음: 역할, 환경, 시간대 */
 .role,
 .workEnvironment,
-.workShift 
-{
-    display: grid;
-    grid-template-columns: repeat(5,120px);
-    grid-template-rows: repeat(1,120px);
-    gap: 25px;
-    margin-bottom: 40px;
-    
+.workShift {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
 }
+
+/* 선택 항목 박스 */
 .role-item,
 .workEnvironment-item,
-.workShift-item 
-{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    border: 2px solid var(--color-border);
-    border-radius: 10px;
-    position: relative;
-
-    transition: 0.5s;
-
-    p {
-        margin: 0;
-        font-weight: 600;
-        color: var(--color-text);
-        font-size: 20px;
-    }
+.workShift-item {
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 14px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
 }
 
+.role-item:hover,
+.workEnvironment-item:hover,
+.workShift-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.role-item p,
+.workEnvironment-item p,
+.workShift-item p {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 18px;
+}
+
+/* 인풋 숨기기 */
 .role input,
 .workEnvironment input,
-.workShift input 
-{
-    display: none;
+.workShift input {
+  display: none;
 }
 
+/* 선택된 카드 스타일 */
 .role input:checked + .role-item,
 .workEnvironment input:checked + .workEnvironment-item,
-.workShift input:checked + .workShift-item
-{
-    background-color: var(--color-background);
-    border: 2px solid var(--color-primary);
-    box-shadow: 0 1px 5px var(--color-primary);
-    color: var(--color-primary);
-
-    p {
-        color: var(--color-primary);
-    }
-
-    /* 체크 되기 전 아이콘 */
-    .check i:nth-child(1){
-        display: none;
-    }
-
-    /* 체크 된 후 아이콘 */
-    .check i:nth-child(2){
-        display: block;
-        color: var(--color-primary);
-    }
-
+.workShift input:checked + .workShift-item {
+  background-color: #E8E8FE;
+  border-color: #504FE3;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
 }
 
+.role input:checked + .role-item p,
+.workEnvironment input:checked + .workEnvironment-item p,
+.workShift input:checked + .workShift-item p {
+  color: #504FE3;
+}
 
-
+/* 체크 아이콘 영역 */
 .role-item .check,
 .workEnvironment-item .check,
-.workShift-item .check
-{
-    position: absolute;
-    top: 10px;
-    left: 10px;
+.workShift-item .check {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 
-    i:nth-child(2){
-        display: none;
-    }
+.check i:nth-child(1) {
+  display: block;
+}
+
+.check i:nth-child(2) {
+  display: none;
+}
+
+.role input:checked + .role-item .check i:nth-child(1),
+.workEnvironment input:checked + .workEnvironment-item .check i:nth-child(1),
+.workShift input:checked + .workShift-item .check i:nth-child(1) {
+  display: none;
+}
+
+.role input:checked + .role-item .check i:nth-child(2),
+.workEnvironment input:checked + .workEnvironment-item .check i:nth-child(2),
+.workShift input:checked + .workShift-item .check i:nth-child(2) {
+  display: block;
+  color: #504FE3;
 }
 
 .bx {
-    color: var(--color-text);
+  font-size: 20px;
+  color: #999;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .recommended-products {
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .recommended-products {
     display: flex;
     gap: 10px;
-    background-color: rgb(215, 247, 175);
+    /* background-color: rgb(215, 247, 175); */
 }
 
 .product {
@@ -233,4 +251,137 @@ button.survey-submit {
 .product-img{
     width: 80px;
     height: 80px;
+}
+
+
+@media screen and (max-width:1024px){
+
+button.survey-button {
+  bottom: 40px;
+  font-size: 15px;
+  width: 140px;
+  height: 46px;
+}
+
+
+}
+
+
+@media screen and (max-width:640px){
+
+button.survey-button {
+  bottom: 30px;
+  font-size: 14px;
+  width: 132px;
+  height: 40px;
+}
+
+
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .survey-form {
+    width: 90%;
+    top: 0;
+    padding: 24px;
+  }
+
+  .role,
+  .workEnvironment,
+  .workShift {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  button.survey-close {
+    top: 16px;
+    right: 16px;
+    width: 64px;
+    height: 30px;
+  }
+
+  button.survey-submit {
+    bottom: 24px;
+    right: 24px;
+    width: 90px;
+    height: 38px;
+  }
+
+  .role-item,
+  .workEnvironment-item,
+  .workShift-item{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+  .role-item p,
+  .workEnvironment-item p,
+  .workShift-item p {
+    font-size: 16px;
+  }
+
+
+}
+
+
+
+@media (max-width: 640px) {
+
+  .survey-form {
+    width: 90vw;
+    height: 100%;
+    padding: 20px;
+    top: 0;
+  }
+
+  .survey-form h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .role,
+  .workEnvironment,
+  .workShift {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .role-item,
+  .workEnvironment-item,
+  .workShift-item {
+    padding: 12px;
+  }
+
+  .role-item p,
+  .workEnvironment-item p,
+  .workShift-item p {
+    font-size: 15px;
+  }
+
+  button.survey-close {
+    width: 60px;
+    height: 28px;
+    font-size: 14px;
+    top: 12px;
+    right: 12px;
+  }
+
+  button.survey-submit {
+    width: 85px;
+    height: 36px;
+    font-size: 14px;
+    bottom: 70px;
+    right: 20px;
+  }
+
+  .bx {
+    font-size: 18px;
+  }
 }

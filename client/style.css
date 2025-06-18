@@ -27,7 +27,6 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  padding-bottom: 120px;
 }
 
 /* 🔹 공통 섹션 */
@@ -36,4 +35,61 @@ section {
   max-width: 1520px;
   margin: auto;
   padding: 0 20px;
+}
+
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Pretendard', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.gnb {
+  display: flex;
+  gap: 36px;
+}
+
+.gnb a {
+  font-size: 15px;
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.gnb a:hover {
+  color: #007BFF;
+}
+
+.util-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.util-menu a {
+  color: #444;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.util-menu a:hover {
+  color: #007BFF;
 }
