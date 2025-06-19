@@ -3,17 +3,30 @@
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(27, 27, 26);
+  background-color: rgb(253, 165, 0);
   color: var(--color-bg);
   font-family: var(--font-family);
-  padding: 8px 16px;
-  border-radius: 8px;
+  padding: 12px 20px;
+  border-radius: 20px;
   font-size: 1rem;
   z-index: 10;
   pointer-events: none;
-  transition: opacity var(--transition-speed)ease-in-out;
+  transition: opacity var(--transition-speed) ease-in-out;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  animation: dropIn 0.5s ease-out;
 }
 
+
+@keyframes dropIn {
+  0% {
+    transform: translate(-50%, -200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
 .product-card{
   position: relative;
   overflow: hidden;
