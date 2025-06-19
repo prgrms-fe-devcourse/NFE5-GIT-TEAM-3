@@ -13,6 +13,7 @@ import { updateStar } from "./update-star.js";
         body.classList.add('dark-theme');
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'block';
+        updateStar();
       }
 
       // 테마 토글 이벤트
