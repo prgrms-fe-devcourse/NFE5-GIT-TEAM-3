@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { getStorage } from "../storage.js";
 import { addToWishlist, addToCart, buyNow } from "./floating-event.js";
 import { handleMeme, handlehoverDetection } from "../easter-egg/easter-egg.js";
@@ -147,4 +145,3 @@ document.addEventListener('DOMContentLoaded', function () {
     handlehoverDetection();
 });
 
->>>>>>> feature/developer-survey

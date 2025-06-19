@@ -1,10 +1,6 @@
 import { getStorage, setStorage } from "../storage.js";
-<<<<<<< HEAD
 import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
 import { handleMeme, hoverDetection } from "../easter-egg/easter-egg.js";
-=======
-import { createProduct } from "../rendering/rendering.js";
->>>>>>> feature/developer-survey
 
 const SURVEY_KEY = 'survey';
 const PRODUCTS_KEY = 'products';
@@ -62,7 +58,6 @@ export function handleRecommendedProducts() {
     renderRecommendedProducts(recommendedProducts,recommendedSection);
 }
 
-<<<<<<< HEAD
 
 
 
@@ -71,23 +66,6 @@ export function handleRecommendedProducts() {
 initRecommendedProducts();
 handleMeme();
 hoverDetection();
-=======
-/**
- * 추천 상품 렌더링
- * 
- * @param {Product[]} products  생성할 상품 리스트
- * @param {object} parentElement 생성된 상품을 넣어줄 부모 요소
- * 
- * @returns {void}
- */
-function renderRecommendedProducts(products, parentElement) {
-    const limitedProducts = products.slice(0,8);
-    limitedProducts.forEach(product => {
-        const card = createProduct(product);
-        parentElement.insertAdjacentElement('beforeend', card);
-    });
-}
->>>>>>> feature/developer-survey
 
 /**
  * 추천상품 init
@@ -102,12 +80,4 @@ export function initRecommendedProducts() {
         data = [];
         setStorage(PRODUCTS_KEY, data);
     }
-<<<<<<< HEAD
 }
-=======
-}
-
-
-initRecommendedProducts();
-
->>>>>>> feature/developer-survey

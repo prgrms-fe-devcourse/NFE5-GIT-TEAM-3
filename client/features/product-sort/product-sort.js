@@ -1,13 +1,9 @@
 /* global Swiper */
 import { getStorage } from "../storage.js";
-<<<<<<< HEAD
 import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
 import { handleMeme, hoverDetection } from "../easter-egg/easter-egg.js";
 
 const KEY = 'products';
-=======
-import { createProduct } from "../rendering/rendering.js";
->>>>>>> feature/developer-survey
 
 const PRODUCTS_KEY = 'products';
 const buttons = document.querySelectorAll("#btn-wrap button");
@@ -156,10 +152,5 @@ const swiper = new Swiper(".productSwiper", {
 
 
 slideProductList(getProductList());
-<<<<<<< HEAD
 handleMeme();
 hoverDetection();
-=======
-renderAllProducts(getProductList());
-handleFiltering();
->>>>>>> feature/developer-survey
