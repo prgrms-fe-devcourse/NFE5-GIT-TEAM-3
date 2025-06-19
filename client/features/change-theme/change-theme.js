@@ -1,3 +1,5 @@
+import { updateStar } from "./update-star.js";
+
 // 테마 토글 기능
     document.addEventListener('DOMContentLoaded', function () {
       const themeToggle = document.getElementById('themeToggle');
@@ -16,7 +18,7 @@
       // 테마 토글 이벤트
       themeToggle.addEventListener('click', function () {
         body.classList.toggle('dark-theme');
-
+        updateStar();
         if (body.classList.contains('dark-theme')) {
           sunIcon.style.display = 'none';
           moonIcon.style.display = 'block';

@@ -89,24 +89,17 @@ button.survey-button:hover {
 }
 
 button.survey-close {
- 
   margin-left: auto;
   display: block;
-  width: 72px;
-  height: 32px;
+  width: 24px;
   border: none;
-  border-radius: 6px;
-  background-color: #eee;
-  color: #333;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  background-color:  transparent;
 }
 
-button.survey-close:hover {
-  background-color: #ccc;
-}
 
 /* 제출 버튼 */
 button.survey-submit {
@@ -263,7 +256,7 @@ button.survey-button {
 
   .survey-form {
     width: 90%;
-    top: 0;
+    top: 48%;
     padding: 24px;
   }
 

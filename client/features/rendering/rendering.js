@@ -2,6 +2,7 @@ import { getStorage } from "../storage.js";
 import { addToWishlist, addToCart, buyNow } from "./floating-event.js";
 import { handleMeme, handlehoverDetection } from "../easter-egg/easter-egg.js";
 import { shuffle } from "../shuffle-products.js";
+import { updateStar } from "../change-theme/update-star.js";
 
 const PRODUCTS_KEY = 'products';
 
@@ -60,7 +61,7 @@ function getProductTemplate({ name, price, img, txt, likes, reviews }) {
                 <p class="txt">${txt}</p>
                 <span class="price">${price.toLocaleString()}원</span>
                 <div class="rating">
-                    <img src="features/product-sort/img/star_on.png" alt="평점이미지" />
+                    <img class="star" src="features/product-sort/img/star_on.png" alt="평점이미지" />
                     <span>${likes.toFixed(1)}</span>
                     <span>(${reviews})</span>
                 </div>
@@ -122,6 +123,8 @@ function renderCategoryProducts(products) {
       const card = createProduct(product);
       target.insertAdjacentElement('beforeend', card);
     });
+
+    updateStar();
   });
 }
 
