@@ -1,7 +1,9 @@
 /**
- * local storage에 데이터 저장하기
- * @param {string} KEY 
- * @param {list} value 
+ * Local Storage에 데이터 저장하기
+ * 
+ * @param {string} KEY - 저장할 키
+ * @param {object | any[]} value - 저장할 값
+ * @returns {void}
  */
 export function setStorage(KEY, value){
     try {
@@ -12,9 +14,10 @@ export function setStorage(KEY, value){
 }
 
 /**
- * local storage에서 데이터 가져오기
- * @param {string} KEY 
- * @returns 로컬에 저장된 데이터
+ * Local Storage에서 데이터 가져오기
+ * 
+ * @param {string} KEY - 가져올 데이터의 키
+ * @returns {any | null} 로컬에 저장된 데이터 객체 또는 실패 시 null
  */
 export function getStorage(KEY){
     try{
