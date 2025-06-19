@@ -50,9 +50,10 @@ html {
 }
 
 .side-menu.open ~ .hamburger-btn {
-  left: auto;
-  right: 20px;
-
+  position: fixed;
+  left: 200px;
+  top: 63.33px;
+  transition: left 0.3s ease-in-out;
   > svg > path {
     fill: white;
   }
@@ -169,21 +170,12 @@ ul > .li2 > .chevron1 {
     display: flex;
     flex-direction: column;
       
+  
   }
 
-  header.side-menu.open > .logo-bar {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-
-  }
-
-  .side-menu.open ~  .hamburger-btn {
+  .side-menu.open +  .hamburger-btn {
     position: fixed;
-    top: 60.33px ;
+    left: calc(100vw - 60px);
     z-index: 1000 ;
     background-color: transparent ;
     width: 49px;
