@@ -104,22 +104,27 @@ export function createProduct(product) {
  * @returns {void}
  */
 function renderCategoryProducts(products) {
+  const allCategories = ['overtime', 'emotion', 'equipment', 'fashion','etc'];
 
-    const randomProducts = shuffle(products);
-    const limitedProducts = randomProducts.slice(0,8);
+  // 카테고리별로 최대 8개씩 랜덤하게 렌더링
+  allCategories.forEach(category => {
+    const target = document.querySelector(`div.product-grid.${category}`);
 
-    limitedProducts.forEach(product => {
-        const category = product.category;
+    // 해당 카테고리에 포함된 제품들 추출
+    const categoryProducts = products.filter(p =>
+      Array.isArray(p.category) && p.category.includes(category)
+    );
 
-        category.forEach(c => {
-            const target = document.querySelector(`div.product-grid.${c}`);
-            if (target) {
-                const card = createProduct(product); // ✅ 매번 새로 생성
-                target.insertAdjacentElement('beforeend', card);
-            }
-        });
+    const randomProducts = shuffle([...categoryProducts]).slice(0, 8);
+
+    // 렌더링
+    randomProducts.forEach(product => {
+      const card = createProduct(product);
+      target.insertAdjacentElement('beforeend', card);
     });
+  });
 }
+
 
 /**
  * 카테고리 상품 랜더링 핸들러
