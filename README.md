@@ -24,7 +24,7 @@
 │ │ ├── /rendering   (상품 리스트 렌더링 관련 기능)
 │ │ ├── products.js   (상품 데이터 정의)
 │ │ ├── shuffle-products.js   (상품 무작위 정렬 함수)
-│ │ └── storage.js localStorage   (제어 모듈)
+│ │ └── storage.js   (localStorage 제어)
 │ │
 │ ├── /utils 
 │ │ ├── attr.js 
