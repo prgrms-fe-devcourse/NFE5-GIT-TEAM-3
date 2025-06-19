@@ -7,4 +7,4 @@ import './features/easter-egg/easter-egg.js';
 import './features/rendering/rendering.js';
 import './features/product-sort/product-sort.js';
 import './features/developer-survey/recomended-products.js';
-import './features/rendering/floating-event.js';
+
