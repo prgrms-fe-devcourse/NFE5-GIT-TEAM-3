@@ -81,21 +81,21 @@
 
 
 .keyword .keyword-txt{
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .keyword .keyword-txt span {
   font-size: 16px;
   font-weight: 400;
   display: inline-block;
-  color: #504FE3;
+  color: #0974d8;
   line-height: 1.6;          
   letter-spacing: -0.01em;   
   font-family: 'Pretendard', sans-serif;
 }
 
 .keyword .keyword-txt h2 {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 700;
   color: #222;
   line-height: 1.3;          
@@ -111,14 +111,14 @@
 
 .keyword ul.keyword-list li{
   border: 1px solid  #ddd;
-  padding: 24px;
+  padding: 20px;
   border-radius: 14px;
   transition: all 0.3s;
   cursor: pointer;
 }
 
 .keyword ul.keyword-list li .top{
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,7 +140,7 @@
 }
 
 .keyword ul.keyword-list li .top button.arrow img{
-  width: 32px;
+  width: 24px;
 }
 
 
@@ -174,18 +174,64 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
 }
 
-.txt-wrap h2 {
-  font-size: 32px;
+.txt-wrap h2.txt{
+   font-size: 26px;
   font-weight: 700;
-  margin: 0;
+  color: #222;
+  line-height: 1.3;          
+  letter-spacing: -0.02em;   
   font-family: 'Pretendard', sans-serif;
+  margin-bottom: 0;
 }
+
+.txt-wrap button {
+  border: 1px solid #ddd;
+  background: transparent;
+  display: inline-block;
+  width: 100px;
+  height: 42px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+.txt-wrap button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0974d8; 
+  z-index: -1;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.txt-wrap button:hover::before {
+  transform: scaleX(1);
+}
+
+.txt-wrap button:hover {
+  color: #fff;
+  border-color: #0974d8;
+}
+
 
 .btn-wrap button {
   border: 1px solid #ddd;
-  padding: 10px 18px;
+  padding: 10px 14px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -198,11 +244,12 @@
 
 .btn-wrap button:hover,
 .btn-wrap button.on {
-  background-color: #222;
+  background-color: #0974d8;
+  border: 1px solid #0974d8;
   color: #fff;
 }
 
-/* 🔹 상품 리스트 (Grid 형태) */
+
 ul.productList {
   list-style: none;
   display: grid;
@@ -217,7 +264,7 @@ ul.productList {
   overflow: hidden;
 }
 
-/* 🔹 이미지 스타일 */
+
 figure{
   margin: 0;
 }
@@ -226,16 +273,13 @@ figure.img {
   height: 220px;
   margin-bottom: 20px;
   border-radius: 6px;
-  background-color: #ddd;
+  background-color: #fafafa;
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.productList li:hover figure.img,
-.swiper-slide:hover figure.img {
-  transform: scale(0.95);
-}
+
 
 /* 🔹 상품 정보 텍스트 */
 .info .brand {
@@ -247,6 +291,14 @@ figure.img {
   line-height: 1.4;         
   letter-spacing: -0.01em;    
   font-family: 'Pretendard', sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  width: 100%;
+  max-width: 100%;
 }
 
 .info .txt {
@@ -256,6 +308,14 @@ figure.img {
   line-height: 1.6;           
   letter-spacing: -0.01em;
   font-family: 'Pretendard', sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  width: 100%;
+  max-width: 100%;
 }
 
 .info .price {
@@ -273,14 +333,14 @@ figure.img {
 
 .info .rating span {
   font-size: 14px;
-  color: #555;
+  font-weight: 400;
+  color: #222;
 }
 
 .info .rating img {
   width: 16px;
   height: 16px;
   margin-bottom: -2px;
-  margin-right: 3px;
 }
 
 /* 🔹 슬라이드 영역 */
@@ -347,7 +407,7 @@ figure.img {
 }
 
 .footer-container {
-  max-width: 1520px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
@@ -463,3 +523,132 @@ figure.img {
   }
 }
 
+
+section.faq{
+  display: flex;
+  gap: 100px
+}
+
+section.faq .tit_wrap{
+ 
+}
+
+section.faq .tit_wrap .txt .name{
+  font-size: 16px;
+  font-weight: 400;
+  color: #0974d8;
+  margin-bottom: 14px;
+  display: block;
+}
+
+section.faq .tit_wrap .txt .heading{
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 14px;
+}
+
+section.faq .tit_wrap .txt p{
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 36px;
+}
+
+.faq .tit_wrap button {
+    border: 1px solid #ddd;
+    background: transparent;
+    display: inline-block;
+    width: 100px;
+    height: 42px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.faq .tit_wrap button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0974d8; 
+  z-index: -1;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.faq .tit_wrap button:hover::before {
+  transform: scaleX(1);
+}
+
+.faq .tit_wrap button:hover {
+  color: #fff;
+  border-color: #0974d8;
+}
+
+
+section.faq ul.faq_list {
+  width: 100%;
+
+}
+
+section.faq ul.faq_list li{
+  padding: 26px 14px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s;
+
+}
+
+section.faq ul.faq_list li:hover{
+  border-bottom: 1px solid #222;
+}
+
+section.faq ul.faq_list li:hover .tit h3{
+  color: #0974d8;
+}
+
+
+section.faq ul.faq_list li .tit h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.6;
+  position: relative;
+  transition: all 0.3s;
+  display: inline-block; 
+  max-width: fit-content; 
+}
+
+
+section.faq ul.faq_list li .tit h3::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  height: 8px;
+  background-color: rgb(199, 228, 255);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  border-radius: 3px; 
+  z-index: -1;
+}
+
+section.faq ul.faq_list li:hover .tit h3::before {
+  transform: scaleX(1);
+}
+section.faq ul.faq_list li p{
+  display: none;
+}

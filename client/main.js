@@ -9,5 +9,3 @@ import './features/product-sort/product-sort.js';
 import './features/developer-survey/recommended-products.js';
 import './features/change-theme/change-theme.js';
 
-
-

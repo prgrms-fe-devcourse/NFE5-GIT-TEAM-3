@@ -180,8 +180,3 @@ function initSurvey(){
 initSurvey();
 createForm();
 handleOpenSurvey();
-
-
-
-
-

@@ -60,7 +60,7 @@ function getProductTemplate({ name, price, img, txt, likes, reviews }) {
                 <p class="txt">${txt}</p>
                 <span class="price">${price.toLocaleString()}원</span>
                 <div class="rating">
-                    <img src="./product-sort/img/star.on.png" alt="평점이미지" />
+                    <img src="features/product-sort/img/star_on.png" alt="평점이미지" />
                     <span>${likes.toFixed(1)}</span>
                     <span>(${reviews})</span>
                 </div>
