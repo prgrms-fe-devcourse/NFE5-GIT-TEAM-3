@@ -49,9 +49,14 @@ html {
   }
 
 }
-.side-menu > .logo-bar > .logo {
+.side-menu > .logo-bar > a {
   width: 150px;
   height: 30px;
+  display: flex;
+  
+  > svg {
+    width: 100%;
+  }
 }
 
 ul {
