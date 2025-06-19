@@ -50,7 +50,7 @@ function getRecomdedProducts(){
  * @returns {void}
  */
 export function handleRecommendedProducts() {
-    const recommendedSection = document.querySelector('.recommended-products');
+    const recommendedSection = document.querySelector('div.recommended-products');
     
     recommendedSection.replaceChildren();
     const recommendedProducts = getRecomdedProducts();
