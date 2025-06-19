@@ -12,7 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY; // 대상 위치 계산
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY-100; // 대상 위치 계산
       const startPosition = window.scrollY; // 현재 스크롤 위치
       const distance = targetPosition - startPosition; // 이동 거리
       const duration = 800; // 애니메이션 지속 시간 (밀리초)
