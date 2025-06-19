@@ -2,10 +2,32 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+.header-bar {
+  position: fixed;
+  z-index: 100;
+  background-color: #a9a9a9;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+}
+
+.header-text {
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
 .side-menu {
   position: fixed;
   left: -260px;
-  top: 0;
+  top: 40px;
   width: 220px;
   height: 100vh;
   background-color: #403e3e;
@@ -27,19 +49,18 @@ html {
   margin-bottom: 20px;
 }
 
-.side-menu.open > .logo-bar > button {
-  position: relative;
-  top: -0.4px;
-  left : -0.2px;
+.side-menu.open ~ .hamburger-btn {
+  left: auto;
+  right: 20px;
 
   > svg > path {
     fill: white;
   }
 }
 
-.side-menu > .logo-bar > button {
+.hamburger-btn {
   position: fixed;
-  top: 20px;
+  top: 60.33px;
   left: 20px;
   z-index: 1000;
   background-color: transparent;
@@ -119,6 +140,20 @@ ul > .li2 > .chevron1 {
 }
 
 @media (max-width: 768px) {
+
+  .header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
   .side-menu {
     left: -260px;
     height: 100%;
@@ -128,29 +163,83 @@ ul > .li2 > .chevron1 {
 
   .side-menu.open {
     left: 0;
+    opacity: 80%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+      
   }
 
-  .side-menu.open > .logo-bar > button {
+  header.side-menu.open > .logo-bar {
     position: relative;
-    top: -0.4px;
-    left : -0.2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
+
+  }
+
+  .side-menu.open ~  .hamburger-btn {
+    position: fixed;
+    top: 60.33px ;
+    z-index: 1000 ;
+    background-color: transparent ;
+    width: 49px;
+    transition: left 0.3s ease-in-out;
+  
     > svg > path {
-      fill: white;
+      fill: white ;
     }
   }
 
-  .side-menu > .logo-bar > button {
+ .hamburger-btn {
     position: fixed;
-    top: 20px;
+    top: 60.33px;
     left: 20px;
     z-index: 1000;
     background-color: transparent;
+
     > svg > path {
       fill: black
     }
 
   }
 
+  .side-menu.open > ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: visible
+  }
+
+  .side-menu.open > ul > li {
+    font-size: 5vw;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .side-menu.open > ul > li > svg
+  {
+    width: 5vw;
+    height: auto;
+  }
+
+  .side-menu.open > ul > .li1
+   {
+    margin-left: 20px;
+   }
+
+  .side-menu.open > ul > .li1 > a > .folder {
+    width: 5vw;
+    height: auto;
+  }
+  .side-menu.open > ul > .li1 > a > .chevron2 {
+    width: 3vw;
+    height: auto;
+  }
 }
+
  
