@@ -135,8 +135,6 @@ function renderCategoryProducts(products) {
  * @returns {void}
  */
 function handleCategoryProducts(){
-    console.log(getProductList());
-
     renderCategoryProducts(getProductList());
 }
 
