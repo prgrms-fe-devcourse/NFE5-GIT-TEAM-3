@@ -50,17 +50,17 @@ function getProductTemplate({ name, price, img, txt, likes, reviews }) {
         <div class="product-card">
             <div class="product-image">
                 <img src="${img}" alt="${name}" style="height: 100%; object-fit: cover; border-radius: 8px;" />
-                <div class="action-icons">
-                    <button class="action-btn wishlist-btn">♥</button>
-                    <button class="action-btn cart-btn">🛒</button>
-                    <button class="action-btn buy-btn">💳</button>
+                <div class="action-icons" aria-hidden="true">
+                    <button class="action-btn wishlist-btn" aria-label="${name} 찜하기">♥</button>
+                    <button class="action-btn cart-btn" aria-label="${name} 장바구니에 담기">🛒</button>
+                    <button class="action-btn buy-btn" aria-label="${name} 바로 구매하기">💳</button>
                 </div>
             </div>
             <div class="info">
-                <span class="brand">${name}</span>
-                <p class="txt">${txt}</p>
-                <span class="price">${price.toLocaleString()}원</span>
-                <div class="rating">
+                <span class="brand" tabindex="0" aria-label="상품명:${name}">${name}</span>
+                <p class="txt" tabindex="0" aria-label="상품설명:${txt}">${txt}</p>
+                <span class="price" tabindex="0" aria-label="상품가격:${price.toLocaleString()}원">${price.toLocaleString()}원</span>
+                <div class="rating" tabindex="0" aria-label="상품평점 ${likes.toFixed(1)}점, 리뷰 ${reviews}개">
                     <img class="star" src="features/product-sort/img/star_on.png" alt="평점이미지" />
                     <span>${likes.toFixed(1)}</span>
                     <span>(${reviews})</span>
