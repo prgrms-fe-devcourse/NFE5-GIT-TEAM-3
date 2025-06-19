@@ -94,3 +94,9 @@ section {
 .util-menu a:hover {
   color: #007BFF;
 }
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
