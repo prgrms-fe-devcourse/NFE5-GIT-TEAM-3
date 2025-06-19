@@ -1,9 +1,7 @@
 /* global Swiper */
 import { getStorage } from "../storage.js";
-import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
-import { handleMeme, hoverDetection } from "../easter-egg/easter-egg.js";
-
-const KEY = 'products';
+import { createProduct } from "../rendering/rendering.js";
+import { shuffle } from "../shuffle-products.js";
 
 const PRODUCTS_KEY = 'products';
 const buttons = document.querySelectorAll("#btn-wrap button");
@@ -47,7 +45,8 @@ function getProductList(){
  */
 function renderAllProducts(products) {
   allProducts.innerHTML = ""; 
-  const limitedProducts = products.slice(0, 10); // 최대 8개만 출력
+  const randomProducts = shuffle(products);
+  const limitedProducts = randomProducts.slice(0, 10); // 최대 8개만 출력
 
   limitedProducts.forEach((item) => {
     const card = createProduct(item);
@@ -152,5 +151,5 @@ const swiper = new Swiper(".productSwiper", {
 
 
 slideProductList(getProductList());
-handleMeme();
-hoverDetection();
+renderAllProducts(getProductList());
+handleFiltering();
