@@ -174,19 +174,5 @@ function initSurvey(){
     if(!data) {
         setStorage(SURVEY_KEY,{role:[], workEnvironment:[], workShift:[]});
     }
-<<<<<<< HEAD
     createRecommendedProducts();
 }
-=======
-    handleRecommendedProducts();
-}
-
-initSurvey();
-createForm();
-handleOpenSurvey();
-
-
-
-
-
->>>>>>> feature/developer-survey
