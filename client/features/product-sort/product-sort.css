@@ -80,6 +80,59 @@
 }
 
 
+@media (max-width: 1024px) {
+
+  .visual{
+  height: 600px;
+  margin-bottom: 100px;
+}
+
+.visual::before{
+  font-size: 120px;
+  left: 50%;
+  top: 40%;
+  translate:-50% -50%;
+  opacity: 0.2;
+}
+
+.visual .txt{
+  padding: 0 20px;
+  left: 50%;
+  bottom: 13%;
+}
+
+.visual figure img {
+  width: 350px; 
+  left: 50%;
+  top: 35%;
+
+}
+
+.visual .txt span {
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.4;           
+}
+
+.visual .txt h3 {
+  font-size: 36px;
+}
+
+.visual .txt p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  line-height: 1.3;            
+}
+
+
+}
+
+
+
+
+
 .keyword .keyword-txt{
   margin-bottom: 24px;
 }
@@ -509,19 +562,24 @@ figure.img {
   padding-top: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   ul.productList{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
-      gap: 15px;
-      overflow-x: hidden !important;
-      justify-content: center;
-      align-items: center;
-      width: 100% !important;
-      box-sizing: border-box;
-
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
   }
 }
+
+@media (max-width: 640px) {
+  ul.productList{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
 
 
 section.faq{
@@ -651,4 +709,57 @@ section.faq ul.faq_list li:hover .tit h3::before {
 }
 section.faq ul.faq_list li p{
   display: none;
+}
+
+body.dark-theme .info .brand {
+  color: #fff;
+}
+
+body.dark-theme .info .price {
+  color: #fff;
+}
+
+body.dark-theme .info .rating span {
+  color: #797979;
+}
+
+body.dark-theme .txt-wrap button{
+  color: #fff;
+}
+
+body.dark-theme section.faq .tit_wrap .txt .heading{
+  color: #fff;
+}
+
+body.dark-theme .keyword ul.keyword-list li .bottom p.title{
+  color: #fff;
+}
+
+body.dark-theme section.faq ul.faq_list li{
+  border-bottom: 1px solid #3c3c3c;
+}
+
+body.dark-theme section.faq ul.faq_list li:hover{
+  border-bottom: 1px solid #fff;
+}
+
+body.dark-theme section.faq ul.faq_list li .tit h3{
+  color: #fff;
+}
+
+body.dark-theme .faq .tit_wrap button{
+  color: #fff;
+}
+
+body.dark-theme .txt-wrap button{
+  background-color: #1a1a1a;
+}
+
+body.dark-theme .txt-wrap button.on{
+  background-color: #0974d8;;
+}
+
+
+body.dark-theme .txt-wrap h2.txt{
+  color: #fff;
 }
