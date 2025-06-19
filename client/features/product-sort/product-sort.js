@@ -109,7 +109,7 @@ function slideProductList(data) {
         <p class="txt">${item.txt}</p>
         <span class="price">${item.price.toLocaleString()}원</span>
         <div class="rating">
-          <img src="./product-sort/img/star.on.png" alt="평점이미지" />
+          <img src="features/product-sort/img/star_on.png" alt="평점이미지" />
           <span>${item.likes.toFixed(1)}</span>
         </div>
       </div>
