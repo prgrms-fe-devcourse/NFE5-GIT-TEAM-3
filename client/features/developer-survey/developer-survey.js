@@ -1,5 +1,5 @@
 import { setStorage, getStorage } from "../storage.js";
-import { handleRecommendedProducts } from "./recomended-products.js"
+import { handleRecommendedProducts } from "./recommended-products.js"
 
 const SURVEY_KEY = 'survey';
 const surveyButton = document.querySelector('.survey-button');
