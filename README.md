@@ -10,41 +10,42 @@
 ```
 /devMart
 │
-├── /client
-│   ├── /assets
-│   │   ├── /images
-│   │   └── /sounds
-│   │
-│   ├── /features (주요 기능별 모듈 구성)
-│   │   ├── /developer-survey (개발자 유형 테스트)
-│   │   ├── /easter-egg (밈 이스터에그)
-│   │   ├── /navigation (좌측 내비게이션 메뉴)
-│   │   ├── /product-sort (상품 정렬 기능)        
-│   │   ├── /rendering (상품 렌더링)
-│   │   ├── products.js (전체 상품 데이터)
-│   │   ├── shuffle-products.js (상품 배열 무작위 함수)
-│   │   └── storage.js (localStorage 관리)     
-│   │
-│   ├── /utils                    
-│   │   ├── attr.js
-│   │   ├── css.js
-│   │   ├── getNode.js
-│   │   ├── insert.js
-│   │   └── type.js
-│   │
-│   ├── index.html
-│   ├── main.js
-│   ├── reset.css
-│   └── style.css
+├── /client 
+│ ├── /assets 
+│ │ ├── /images 
+│ │ └── /sounds 
+│ │
+│ ├── /features  주요 기능별 모듈
+│ │ ├── /change-theme   (테마 전환 기능)
+│ │ ├── /developer-survey   (개발자 유형 테스트)
+│ │ ├── /easter-egg   (밈 이스터에그)
+│ │ ├── /navigation   (좌측 내비게이션 메뉴)
+│ │ ├── /product-sort   (상품 정렬 기능)
+│ │ ├── /rendering   (상품 리스트 렌더링 관련 기능)
+│ │ ├── products.js   (상품 데이터 정의)
+│ │ ├── shuffle-products.js   (상품 무작위 정렬 함수)
+│ │ └── storage.js localStorage   (제어 모듈)
+│ │
+│ ├── /utils 
+│ │ ├── attr.js 
+│ │ ├── css.js 
+│ │ ├── getNode.js
+│ │ ├── insert.js 
+│ │ └── type.js 
+│ │
+│ ├── index.html 
+│ ├── main.js 
+│ ├── reset.css
+│ └── style.css 
 │
-├── /node_modules
+├── /node_modules 
 │
-├── .gitignore
-├── .prettierrc.cjs
-├── eslint.config.mjs
-├── package-lock.json
-├── package.json
-└── README.md
+├── .gitignore 
+├── .prettierrc.cjs 
+├── eslint.config.mjs 
+├── package-lock.json 
+├── package.json 
+└── README.md 
 
 ```
 
