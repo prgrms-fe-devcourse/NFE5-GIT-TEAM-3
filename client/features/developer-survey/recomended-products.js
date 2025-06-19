@@ -66,7 +66,8 @@ export function handleRecommendedProducts() {
  * @returns {void}
  */
 function renderRecommendedProducts(products, parentElement) {
-    products.forEach(product => {
+    const limitedProducts = products.slice(0,8);
+    limitedProducts.forEach(product => {
         const card = createProduct(product);
         parentElement.insertAdjacentElement('beforeend', card);
     });

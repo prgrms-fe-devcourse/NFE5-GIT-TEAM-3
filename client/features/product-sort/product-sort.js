@@ -44,7 +44,7 @@ function getProductList(){
  */
 function renderAllProducts(products) {
   allProducts.innerHTML = ""; 
-  const limitedProducts = products.slice(0, 10); // 최대 10개만 출력
+  const limitedProducts = products.slice(0, 10); // 최대 8개만 출력
 
   limitedProducts.forEach((item) => {
     const card = createProduct(item);
