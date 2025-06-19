@@ -178,7 +178,7 @@ ul > .li2 > .chevron1 {
 
   .side-menu.open +  .hamburger-btn {
     position: fixed;
-    left: calc(100vw - 60px);
+    left: calc(100vw - 70px);
     z-index: 1000 ;
     background-color: transparent ;
     width: 49px;
