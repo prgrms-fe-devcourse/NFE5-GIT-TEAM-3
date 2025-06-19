@@ -20,10 +20,22 @@
     <link rel="stylesheet" href="./features/developer-survey/developer-survey.css" />
     <link rel="stylesheet" href="./features/navigation/navigation.css" />
     <link rel="stylesheet" href="./features/rendering/rendering.css" />
+    <link rel="stylesheet" href="./features/change-theme/change-theme.css" />
       
     <script type="module" src="./main.js" ></script>
 </head>
 <body>
+    <!-- 테마 토글 버튼 -->
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="테마 변경">
+    <svg class="sun-icon" viewBox="0 0 24 24">
+      <path
+        d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" style="display: none;">
+      <path
+        d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" />
+    </svg>
+  </button>
 
   <div class="header-bar">
     <svg width="89" height="21" viewBox="0 0 89 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -722,7 +734,7 @@
       <figure><img src="features/product-sort/img/3d_icon.png" alt="" /></figure>
       <div class="txt">
         <h3>개발자들을 위한 쇼핑몰</h3>
-        <p>10% 추가 할인 혜택 온라인 단독 신상 할인 ~20% 10%쿠폰<br>설렘을 담은 올해 특별한 패션 드레스</p>
+        <p>설문을 통해 나만의 개발자 타입을 확인하고, 딱 맞는 아이템을 만나보세요.<br>숨겨진 이스터에그도 찾아보세요 — devMart는 오늘도 버그 없이 돌아갑니다.</p>
       </div>
 
       <div class="developer-survey">
@@ -832,58 +844,52 @@
         </section>
 
 
-      <div class="container">
-        <div class="transparent" id="section-title1"> </div>
-            <div class="txt-wrap"  >
-              
-                <h2 >추천템</h2>
-              </div>
-            <section class="recommended-products">
-              
-            </section>
-            <div class="transparent" id="section-title2"> </div>
-            <section class="overtime" >
-                <h2 class="section-title" >야근템</h2>
-                <div class="product-grid overtime">
-                </div>
-            </section>
-            <div class="transparent" id="section-title3"> </div>
-            <section class="equipment" >
-                <h2 class="section-title" >장비템</h2>
-                <div class="product-grid equipment">
-                </div>
-            </section>
-            <div class="transparent" id="section-title4"> </div>
-            <section class="emotion" >
-                <h2 class="section-title" >감성템</h2>
-                <div class="product-grid emotion">
-                </div>
-            </section>
-            <div class="transparent" id="section-title5"> </div>
-            <section class="fashion" >
-                <h2 class="section-title" >패션템</h2>
-                <div class="product-grid fashion">
-                </div>
-            </section>
-            <div class="transparent" id="section-title6"> </div>
-            <section class="etc" >
-                <h2 class="section-title" >기타</h2>
-                <div class="product-grid etc">
-                </div>
-            </section>
-            <div class="transparent" id="section-title7"> </div>
-            <section class="all-products" >
-              <div class="txt-wrap">
-                <h2>전체 상품</h2>
-                <p class="btn-wrap" id="btn-wrap">
-                  <button class="on" type="button" id="latest">최신순</button>
-                  <button type="button" id="sold">구매순</button>
-                  <button type="button" id="likes">인기순</button>
-                </p>
-              </div>
-              <ul class="productList" id="productList"></ul>
-            </section>
-        </div>
+
+        <section class="recommended-products">
+          <h2 class="section-title transparent" id="section-title1">추천템</h2>
+          <div class="product-grid recommended-products"></div>
+        </section>
+
+        <section class="overtime">
+            <h2 class="section-title transparent" id="section-title2">야근템</h2>
+            <div class="product-grid overtime">
+            </div>
+        </section>
+
+        <section class="equipment">
+            <h2 class="section-title transparent" id="section-title3">장비템</h2>
+            <div class="product-grid equipment">
+            </div>
+        </section>
+
+        <section class="emotion">
+            <h2 class="section-title transparent" id="section-title4">감성템</h2>
+            <div class="product-grid emotion">
+            </div>
+        </section>
+
+        <section class="fashion">
+            <h2 class="section-title transparent" id="section-title5">패션템</h2>
+            <div class="product-grid fashion">
+            </div>
+        </section>
+        <section class="etc">
+            <h2 class="section-title transparent" id="section-title6">기타</h2>
+            <div class="product-grid etc">
+            </div>
+        </section>
+        <div class="section-title transparent" id="section-title7"> </div>
+        <section class="all-products">
+          <div class="txt-wrap">
+            <h2>전체 상품</h2>
+            <p class="btn-wrap" id="btn-wrap">
+              <button class="on" type="button" id="latest">최신순</button>
+              <button type="button" id="sold">구매순</button>
+              <button type="button" id="likes">인기순</button>
+            </p>
+          </div>
+          <ul class="productList" id="productList"></ul>
+        </section>
     </main>
 
   <footer class="footer">

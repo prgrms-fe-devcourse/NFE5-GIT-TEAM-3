@@ -1,6 +1,7 @@
 import { getStorage } from "../storage.js";
 import { addToWishlist, addToCart, buyNow } from "./floating-event.js";
 import { handleMeme, handlehoverDetection } from "../easter-egg/easter-egg.js";
+import { shuffle } from "../shuffle-products.js";
 
 const PRODUCTS_KEY = 'products';
 
@@ -47,7 +48,7 @@ function getProductTemplate({ name, price, img, txt, likes, reviews }) {
     return /* html */`
         <div class="product-card">
             <div class="product-image">
-                <img src="${img}" alt="${name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+                <img src="${img}" alt="${name}" style="height: 100%; object-fit: cover; border-radius: 8px;" />
                 <div class="action-icons">
                     <button class="action-btn wishlist-btn">♥</button>
                     <button class="action-btn cart-btn">🛒</button>
@@ -103,13 +104,15 @@ export function createProduct(product) {
  * @returns {void}
  */
 function renderCategoryProducts(products) {
-    products.forEach(product => {
-        const card = createProduct(product);
+
+    const randomProducts = shuffle(products);
+    const limitedProducts = randomProducts.slice(0,8);
+
+    limitedProducts.forEach(product => {
         const category = product.category;
-        // if (!Array.isArray(category)) return;
 
         category.forEach(c => {
-            const target = document.querySelector(`.product-grid.${c}`);
+            const target = document.querySelector(`div.product-grid.${c}`);
             if (target) {
                 const card = createProduct(product); // ✅ 매번 새로 생성
                 target.insertAdjacentElement('beforeend', card);

@@ -1,5 +1,6 @@
 import { getStorage, setStorage } from "../storage.js";
 import { createProduct } from "../rendering/rendering.js";
+import { shuffle } from "../shuffle-products.js";
 
 const SURVEY_KEY = 'survey';
 const PRODUCTS_KEY = 'products';
@@ -50,7 +51,7 @@ function getRecomdedProducts(){
  * @returns {void}
  */
 export function handleRecommendedProducts() {
-    const recommendedSection = document.querySelector('.recommended-products');
+    const recommendedSection = document.querySelector('div.recommended-products');
     
     recommendedSection.replaceChildren();
     const recommendedProducts = getRecomdedProducts();
@@ -66,7 +67,9 @@ export function handleRecommendedProducts() {
  * @returns {void}
  */
 function renderRecommendedProducts(products, parentElement) {
-    products.forEach(product => {
+    const randomProducts = shuffle(products);
+    const limitedProducts = randomProducts.slice(0,8);
+    limitedProducts.forEach(product => {
         const card = createProduct(product);
         parentElement.insertAdjacentElement('beforeend', card);
     });

@@ -3,15 +3,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Recommended Products Styles */
-.recommended-products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    border-radius: 12px;
-    margin-bottom: 40px;
-}
-
 .product {
     position: relative;
     background: white;
@@ -49,15 +40,6 @@ html, body {
     color: var(--color-accent);
 }
 
-/* Shopping Mall Styles */
-.container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    overflow-x:hidden;
-    box-sizing: border-box;
-}
-
 .transparent {
     background-color: transparent;
     width: 100%;
@@ -75,7 +57,6 @@ html, body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    margin-bottom: 120px;
 }
 
 .product-card {
@@ -266,10 +247,6 @@ html, body {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 80px);
         gap: 15px;
-    }
-
-    .recommended-products {
-        gap: 14px;
     }
 
     .product-image{

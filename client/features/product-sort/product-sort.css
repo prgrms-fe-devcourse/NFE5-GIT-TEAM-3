@@ -64,7 +64,7 @@
 
 .visual .txt p {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   color: #767676;
   line-height: 1.7;           
   letter-spacing: 0.2px;      
@@ -79,9 +79,6 @@
   }
 }
 
-.keyword{
-  margin-bottom: 140px;
-}
 
 .keyword .keyword-txt{
   margin-bottom: 30px;
@@ -177,7 +174,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
 }
 
 .txt-wrap h2 {
@@ -289,9 +285,7 @@ figure.img {
 
 /* 🔹 슬라이드 영역 */
 .slide {
-  margin-top: 50px;
   position: relative;
-  margin-bottom: 80px;
 }
 
 .swiper {
