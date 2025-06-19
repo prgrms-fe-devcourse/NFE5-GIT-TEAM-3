@@ -47,7 +47,7 @@ function getProductTemplate({ name, price, img, txt, likes, reviews }) {
     return /* html */`
         <div class="product-card">
             <div class="product-image">
-                <img src="${img}" alt="${name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+                <img src="${img}" alt="${name}" style="height: 100%; object-fit: cover; border-radius: 8px;" />
                 <div class="action-icons">
                     <button class="action-btn wishlist-btn">♥</button>
                     <button class="action-btn cart-btn">🛒</button>
@@ -103,7 +103,10 @@ export function createProduct(product) {
  * @returns {void}
  */
 function renderCategoryProducts(products) {
-    products.forEach(product => {
+
+    const limitedProducts = products.slice(0,8);
+
+    limitedProducts.forEach(product => {
         const card = createProduct(product);
         const category = product.category;
         // if (!Array.isArray(category)) return;
