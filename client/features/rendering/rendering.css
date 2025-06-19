@@ -190,19 +190,20 @@ html, body {
 .notification {
     position: fixed;
     top: 20px;
-    right: -300px; /* 시작 위치를 완전히 밖으로 */
+    right: 20px; 
     padding: 15px 20px;
     border-radius: 8px;
     color: white;
     font-weight: bold;
     z-index: 1000;
-    transition: right 0.3s ease; /* transform 대신 right 사용 */
+    transform: translateX(150%);
+    transition: transform 0.3s ease; 
     white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .notification.show {
-    right: 20px; /* 보일 때 위치 */
+   transform: translateX(0);
 }
 
 .notification.success {
