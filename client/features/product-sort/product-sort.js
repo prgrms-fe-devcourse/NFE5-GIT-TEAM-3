@@ -1,62 +1,70 @@
 /* global Swiper */
 import { getStorage } from "../storage.js";
+<<<<<<< HEAD
 import { addToWishlist, addToCart, buyNow } from "../floating-event.js";
 import { handleMeme, hoverDetection } from "../easter-egg/easter-egg.js";
 
 const KEY = 'products';
+=======
+import { createProduct } from "../rendering/rendering.js";
+>>>>>>> feature/developer-survey
 
-// 🔹 [2] DOM 요소 선택
-const list = document.getElementById("productList");
+const PRODUCTS_KEY = 'products';
 const buttons = document.querySelectorAll("#btn-wrap button");
 const slide = document.getElementById("productSwiper");
 const allProducts = document.querySelector('#productList');
 
-// 🔹 [6] 초기에 상품 리스트 표시
+/**
+ * @typedef {Object} Product
+ * @property {string} id
+ * @property {string} name
+ * @property {number} price
+ * @property {string[]} category
+ * @property {string[]} recommendedRole
+ * @property {string[]} recommendedEnv
+ * @property {string[]} recommendedShift
+ * @property {string} txt
+ * @property {number} sold
+ * @property {number} likes
+ * @property {number} reviews
+ * @property {stromg[]} category
+ * ...
+ */
+
+
+/**
+ * Local Storage 상품 가져오기
+ * 
+ * @returns {Product[]} local에서 가져온 데이터
+ */
 function getProductList(){
-  const data = getStorage(KEY);
+  const data = getStorage(PRODUCTS_KEY);
   return data;
 }
 
 
-// 🔹 [3] 상품 리스트 렌더링 함수
-function renderProductList(data) {
+/**
+ * 전체 상품 렌더링
+ * 
+ * @param {Product[]} products 렌더링할 상품 배열
+ * @returns {void}
+ */
+function renderAllProducts(products) {
   allProducts.innerHTML = ""; 
-  const limitedData = data.slice(0, 10); // 최대 10개만 출력
+  const limitedProducts = products.slice(0, 10); // 최대 8개만 출력
 
-  limitedData.forEach((item) => {
-    const {id, name, price, img, txt, likes, reviews} = item;
-    const div = document.createElement('div');
-    const template = /* html */`
-    <div class="product-card">
-        <div class="product-image">
-            <img src="${img}" alt="${name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
-            <div class="action-icons">
-                <button class="action-btn wishlist-btn">♥</button>
-                <button class="action-btn cart-btn">🛒</button>
-                <button class="action-btn buy-btn">💳</button>
-            </div>
-        </div>
-      <div class="info">
-          <span class="brand">${name}</span>
-          <p class="txt">${txt}</p>
-          <span class="price">${price.toLocaleString()}원</span>
-          <div class="rating">
-          <img src="./product-sort/img/star.on.png" alt="평점이미지" />
-          <span>${likes.toFixed(1)}</span>
-          <span>(${reviews})</span>
-      </div>
-    </div>
-    `
-    div.insertAdjacentHTML('beforeend',template);
-    allProducts.insertAdjacentElement('beforeend', div);
-
-    div.querySelector('.wishlist-btn').addEventListener('click', () => addToWishlist(id, name));
-    div.querySelector('.cart-btn').addEventListener('click', () => addToCart(id, name));
-    div.querySelector('.buy-btn').addEventListener('click', () => buyNow(id, name));
+  limitedProducts.forEach((item) => {
+    const card = createProduct(item);
+    allProducts.insertAdjacentElement('beforeend', card);
   });
 }
 
-// 🔹 [4] 상품 정렬 함수
+/**
+ * 상품 필터링
+ * 
+ * @param {string}} type 필터 구분
+ * @returns {void}
+ */
 function sortProducts(type) {
   const sorted = [...getProductList()];
 
@@ -67,22 +75,30 @@ function sortProducts(type) {
   } else if (type === "likes") {
     sorted.sort((a, b) => b.likes - a.likes); // 인기순: likes 높은 순
   }
-  renderProductList(sorted);
+  renderAllProducts(sorted);
 }
 
-// 🔹 [5] 버튼 클릭 이벤트 처리
-buttons.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    buttons.forEach((b) => b.classList.remove("on"));
-    this.classList.add("on");
-    sortProducts(this.id);
+/**
+ * 필터링 버튼 클릭 이벤트 핸들러
+ * 
+ * @returns {void}
+ */
+function handleFiltering (){
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      buttons.forEach((b) => b.classList.remove("on"));
+      this.classList.add("on");
+      sortProducts(this.id);
+    });
   });
-});
+}
 
-
-renderProductList(getProductList());
-
-// 🔹 [7] 슬라이드 상품 렌더링 + Swiper 초기화
+/**
+ * 슬라이드 상품 렌더링 및 Swiper 초기화
+ * 
+ * @param {Product[]} data 슬라이드에 넣어줄 상품 배열
+ * @returns {void}
+ */
 function slideProductList(data) {
   const wrapper = slide.querySelector(".swiper-wrapper");
   wrapper.innerHTML = ""; // 기존 슬라이드 초기화
@@ -107,19 +123,43 @@ function slideProductList(data) {
     wrapper.appendChild(slideEl);
   });
 
-  // Swiper 슬라이드 초기화
-  const swiper = new Swiper(".productSwiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: ".custom-next",
-      prevEl: ".custom-prev",
+// Swiper 슬라이드 초기화
+const swiper = new Swiper(".productSwiper", {
+  loop: true, // 무한 루프
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".custom-next",
+    prevEl: ".custom-prev",
+  },
+
+  // ✅ 반응형 설정
+  breakpoints: {
+    // 0 ~ 639px
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
-    loop: true,
-  });
+    // 640px ~ 1023px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // 1024px 이상
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    }
+  }
+});
 }
 
-// 🔹 [8] 초기에 슬라이드 상품 표시
+
+
 slideProductList(getProductList());
+<<<<<<< HEAD
 handleMeme();
 hoverDetection();
+=======
+renderAllProducts(getProductList());
+handleFiltering();
+>>>>>>> feature/developer-survey
