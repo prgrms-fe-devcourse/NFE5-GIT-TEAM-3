@@ -174,5 +174,9 @@ function initSurvey(){
     if(!data) {
         setStorage(SURVEY_KEY,{role:[], workEnvironment:[], workShift:[]});
     }
-    createRecommendedProducts();
+    handleRecommendedProducts();
 }
+
+initSurvey();
+createForm();
+handleOpenSurvey();

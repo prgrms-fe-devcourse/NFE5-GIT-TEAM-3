@@ -1,6 +1,7 @@
 import { getStorage } from "../storage.js";
 import { addToWishlist, addToCart, buyNow } from "./floating-event.js";
 import { handleMeme, handlehoverDetection } from "../easter-egg/easter-egg.js";
+import { shuffle } from "../shuffle-products.js";
 
 const PRODUCTS_KEY = 'products';
 
@@ -104,15 +105,14 @@ export function createProduct(product) {
  */
 function renderCategoryProducts(products) {
 
-    const limitedProducts = products.slice(0,8);
+    const randomProducts = shuffle(products);
+    const limitedProducts = randomProducts.slice(0,8);
 
     limitedProducts.forEach(product => {
-        const card = createProduct(product);
         const category = product.category;
-        // if (!Array.isArray(category)) return;
 
         category.forEach(c => {
-            const target = document.querySelector(`.product-grid.${c}`);
+            const target = document.querySelector(`div.product-grid.${c}`);
             if (target) {
                 const card = createProduct(product); // ✅ 매번 새로 생성
                 target.insertAdjacentElement('beforeend', card);
