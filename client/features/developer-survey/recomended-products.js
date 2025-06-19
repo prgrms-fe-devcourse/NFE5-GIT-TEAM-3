@@ -1,5 +1,6 @@
 import { getStorage, setStorage } from "../storage.js";
 import { createProduct } from "../rendering/rendering.js";
+import { shuffle } from "../shuffle-products.js";
 
 const SURVEY_KEY = 'survey';
 const PRODUCTS_KEY = 'products';
@@ -66,7 +67,8 @@ export function handleRecommendedProducts() {
  * @returns {void}
  */
 function renderRecommendedProducts(products, parentElement) {
-    const limitedProducts = products.slice(0,8);
+    const randomProducts = shuffle(products);
+    const limitedProducts = randomProducts.slice(0,8);
     limitedProducts.forEach(product => {
         const card = createProduct(product);
         parentElement.insertAdjacentElement('beforeend', card);
