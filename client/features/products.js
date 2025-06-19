@@ -421,6 +421,7 @@ const products = [
     },
 
 
+    
     /* 복사용 객체 예시 */
     {
         id: 28,
@@ -436,8 +437,263 @@ const products = [
         reviews: 132,
         category: ['etc']
 
-    }
+    },
 
+    {
+        id: 29,
+        name: 'Ctrl+S 습관교정 피젯토이',
+        price: 17500,
+        img: './assets/images/product-image-removebg/marpple-keyring.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "피젯토이를 누르며 업무 스트레스를 풀어보세요.",
+        sold: 402,
+        likes: 4.1,
+        reviews: 301,
+        category: ['fashion','etc']
+
+    },
+    {
+        id: 30,
+        name: '개발자 티셔츠',
+        price: 18900,
+        img: './assets/images/product-image-removebg/marpple-tshirt.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "내가 개발자다.",
+        sold: 552,
+        likes: 4.8,
+        reviews: 415,
+        category: ['fashion','etc']
+
+    },
+    {
+        id: 31,
+        name: '개발자 마우스 패드',
+        price: 16900,
+        img: './assets/images/product-image-removebg/marpple-mousepad.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "버그야 물러가라",
+        sold: 152,
+        likes: 4.3,
+        reviews: 132,
+        category: ['fashion','etc']
+
+    },
+    {
+        id: 32,
+        name: '당황한 개발자의 ESC 키캡',
+        price: 9900,
+        img: './assets/images/product-image-removebg/marpple-keycap.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "어? 금지",
+        sold: 888,
+        likes: 4.6,
+        reviews: 754,
+        category: ['fashion','etc']
+
+    },
+    {
+        id: 33,
+        name: '훌륭한 개발자 슬리퍼 검정',
+        price: 25900,
+        img: './assets/images/product-image-removebg/marpple-shoes.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "pov",
+        sold: 207,
+        likes: 4.0,
+        reviews: 98,
+        category: ['overtime','fashion','etc']
+
+    },
+    {
+        id: 34,
+        name: '나는 개발자다',
+        price: 26200,
+        img: './assets/images/product-image-removebg/marpple-tshirt2.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "프린트스타 20수 스탠다드 라운드 티셔츠 (남녀공용)",
+        sold: 97,
+        likes: 3.8,
+        reviews: 55,
+        category: ['fashion','etc']
+
+    },
+    {
+        id: 35,
+        name: '상개발자 후드티 (라이트모드)',
+        price: 39900,
+        img: './assets/images/product-image-removebg/marpple-hoodie.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "상개발자를 위한 후드티입니다. 모든 상황에 어울리는 자유분방한 옷차림을 뽐내보세요.",
+        sold: 289,
+        likes: 4.8,
+        reviews: 101,
+        category: ['fashion','etc']
+
+    },
+    {
+        id: 36,
+        name: '상개발자 후드티 (다크모드)',
+        price: 39900,
+        img: './assets/images/product-image-removebg/marpple-hoodie2.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "상개발자를 위한 후드티입니다. 모든 상황에 어울리는 자유분방한 옷차림을 뽐내보세요.",
+        sold: 467,
+        likes: 4.8,
+        reviews: 312,
+        category: ['fashion','etc']
+
+    },
+    {
+        id: 37,
+        name: '일상이지 말랑푹신 구름 팜레스트 마우스 키보드 손목받침대',
+        price: 18800,
+        img: './assets/images/product-image-removebg/wist-holder.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office'],
+        recommendedShift: ['day', 'night'],
+        txt: "건강하고 편안한 손목을 위해 일상이지 팜레스트로 손목을 보호해 주세요",
+        sold: 905,
+        likes: 4.2,
+        reviews: 871,
+        category: ['overtime', 'equipment']
+
+    },
+    {
+        id: 38,
+        name: '디큐브 맥세이프 무선 충전 보조배터리 거치형 유뮤선겸용',
+        price: 29800,
+        img: './assets/images/product-image-removebg/macsafe-charger.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "무선 충전이 가능한 배터리와 일체형 C타입 케이블로 2가지 디바이스를 동시 충전 가능한 스마트 맥세이프 보조배터리",
+        sold: 601,
+        likes: 4.9,
+        reviews: 513,
+        category: ['overtime', 'equipment']
+
+    },
+    {
+        id: 39,
+        name: '엘가토 8버튼 스트림 덱 플러스 + 다이얼 LCD 컨트롤러',
+        price: 302000,
+        img: './assets/images/product-image-removebg/streamdeck.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office'],
+        recommendedShift: ['day', 'night'],
+        txt: "직관적인 조작과 풍부한 커스터마이징 옵션으로 효율적인 환경을 조성해보세요",
+        sold: 198,
+        likes: 4.9,
+        reviews: 173,
+        category: ['overtime', 'equipment']
+
+    },
+    {
+        id: 40,
+        name: 'Hagibis 무선 HDMI 송수신기 4K HD 5G',
+        price: 93010,
+        img: './assets/images/product-image-removebg/transmitter.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office'],
+        recommendedShift: ['day', 'night'],
+        txt: "4K와 다양한 기능을 제공하는 송수신기로 작업 효율을 올려보세요",
+        sold: 151,
+        likes: 4.3,
+        reviews: 133,
+        category: ['overtime', 'equipment']
+
+    },
+    {
+        id: 41,
+        name: '네스프레소 버츄오 플러스 캡슐커피머신',
+        price: 107500,
+        img: './assets/images/product-image-removebg/coffee-machine.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office'],
+        recommendedShift: ['day', 'night'],
+        txt: "회전 추출로 탄생한 다른 차원의 커피 버츄오 플러스",
+        sold: 152,
+        likes: 4.3,
+        reviews: 132,
+        category: ['overtime']
+
+    },
+    {
+        id: 41,
+        name: '프로그래머스 마우스패드',
+        price: 15000,
+        img: './assets/images/product-image-removebg/programmers-mousepad.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "프롱이 건강하자",
+        sold: 891,
+        likes: 4.1,
+        reviews: 723,
+        category: ['etc']
+
+    },
+    {
+        id: 42,
+        name: '프로그래머스 티셔츠',
+        price: 19000,
+        img: './assets/images/product-image-removebg/programmers-tshirt.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "프롱이 대박나자",
+        sold: 834,
+        likes: 4.4,
+        reviews: 785,
+        category: ['fashion']
+
+    },
+    {
+        id: 43,
+        name: '프로그래머스 웹캠커버',
+        price: 8900,
+        img: './assets/images/product-image-removebg/programmers-webcamcover.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "사생활은 프로그래머스가 지켜줄게",
+        sold: 1023,
+        likes: 4.9,
+        reviews: 954,
+        category: ['equipment','etc']
+
+    },
+    {
+        id: 44,
+        name: '프로그래머스 스티커',
+        price: 7800,
+        img: './assets/images/product-image-removebg/programmers-sticker.png',
+        recommendedRole: ['frontend', 'backend', 'ai', 'publisher'],
+        recommendedEnv: ['home','office','cafe'],
+        recommendedShift: ['day', 'night'],
+        txt: "프롱이 성공하자",
+        sold: 628,
+        likes: 4.0,
+        reviews: 532,
+        category: ['emotion']
+
+    },
 ]
 
 setStorage(KEY, products);
