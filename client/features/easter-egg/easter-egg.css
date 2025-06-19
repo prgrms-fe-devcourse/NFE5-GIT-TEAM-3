@@ -3,12 +3,13 @@
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(253, 165, 0);
+  background-color:#0974d8;
   color: var(--color-bg);
   font-family: var(--font-family);
   padding: 12px 20px;
   border-radius: 20px;
   font-size: 1rem;
+  font-weight: 600;
   z-index: 10;
   pointer-events: none;
   transition: opacity var(--transition-speed) ease-in-out;
