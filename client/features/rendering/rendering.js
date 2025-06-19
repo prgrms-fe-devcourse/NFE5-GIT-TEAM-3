@@ -112,7 +112,7 @@ function renderCategoryProducts(products) {
         const category = product.category;
 
         category.forEach(c => {
-            const target = document.querySelector(`.product-grid.${c}`);
+            const target = document.querySelector(`div.product-grid.${c}`);
             if (target) {
                 const card = createProduct(product); // ✅ 매번 새로 생성
                 target.insertAdjacentElement('beforeend', card);

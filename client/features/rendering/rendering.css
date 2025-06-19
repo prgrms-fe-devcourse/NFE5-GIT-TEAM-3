@@ -3,15 +3,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Recommended Products Styles */
-.recommended-products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    border-radius: 12px;
-    margin-bottom: 40px;
-}
-
 .product {
     position: relative;
     background: white;
@@ -47,15 +38,6 @@ html, body {
     font-size: 18px;
     font-weight: bold;
     color: var(--color-accent);
-}
-
-/* Shopping Mall Styles */
-.container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    overflow-x:hidden;
-    box-sizing: border-box;
 }
 
 .transparent {
