@@ -58,10 +58,13 @@ html, body {
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  gap: 40px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
+
 
 .product-card {
     background: white;
@@ -240,6 +243,7 @@ html, body {
     .survey-form {
         width: 90vw;
         padding: 20px;
+        top: 58%;
     }
 
     .role,
