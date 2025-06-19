@@ -1,11 +1,3 @@
-/* Recommended Products Styles */
-.recommended-products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    border-radius: 12px;
-}
-
 .product {
     position: relative;
     background: white;
@@ -41,13 +33,6 @@
     font-size: 18px;
     font-weight: bold;
     color: var(--color-accent);
-}
-
-/* Shopping Mall Styles */
-.container {
-    width: 100%;
-    max-width: 1520px;
-    margin: 0 auto;
 }
 
 .section-title {
@@ -228,13 +213,6 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.recommended-products {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-
 
 }
 
@@ -267,10 +245,6 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 80px);
         gap: 15px;
-    }
-
-    .recommended-products {
-        gap: 14px;
     }
 
     .product-image{

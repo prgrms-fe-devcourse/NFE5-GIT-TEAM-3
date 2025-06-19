@@ -231,29 +231,6 @@ button.survey-submit:hover {
 }
 
 
-.recommended-products {
-    /* background-color: orange; */
-}
-
-.recommended-products {
-    display: flex;
-    gap: 10px;
-    /* background-color: rgb(215, 247, 175); */
-}
-
-.product {
-    display: flex;
-    width: 250px;
-    height: 300px;
-    background-color: rgb(151, 203, 255);
-}
-
-.product-img{
-    width: 80px;
-    height: 80px;
-}
-
-
 @media screen and (max-width:1024px){
 
 button.survey-button {
