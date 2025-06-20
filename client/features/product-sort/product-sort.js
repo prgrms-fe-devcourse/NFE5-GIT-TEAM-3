@@ -102,10 +102,8 @@ function slideProductList(data) {
     const slideEl = document.createElement("div");
     slideEl.className = "swiper-slide";
 
-    slideEl.innerHTML = `
-      <figure class="img">
-          <img src="${item.img}" alt="상품 이미지">
-      </figure>
+    slideEl.innerHTML = /* html */`
+      <figure class="img"><img src="${img}"></figure>
       <div class="info">
         <span aria-label="상품이름 : ${name}" class="brand">${name}</span>
         <p aria-label="상품설명 : ${txt}" class="txt">${txt}</p>
