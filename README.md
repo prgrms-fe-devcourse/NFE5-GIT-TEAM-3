@@ -71,6 +71,7 @@
 2. [Netlify 배포 링크](...)로도 접속하실 수 있습니다.
 
 ## 👣 유저 플로우
+![Image](https://github.com/user-attachments/assets/b7312980-7573-49c7-8f5d-b9afb559964b)
 ## 🧱 구조도 및 협업툴
 ![Image](https://github.com/user-attachments/assets/9f871e53-64b2-4a71-8123-71b8be7a2498)
 ## 📷 미리보기
