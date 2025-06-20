@@ -267,19 +267,6 @@ button.survey-button {
     gap: 20px;
   }
 
-  button.survey-close {
-    top: 16px;
-    right: 16px;
-    width: 64px;
-    height: 30px;
-  }
-
-  button.survey-submit {
-    bottom: 24px;
-    right: 24px;
-    width: 90px;
-    height: 38px;
-  }
 
   .role-item,
   .workEnvironment-item,
@@ -299,7 +286,6 @@ button.survey-button {
 
 
 }
-
 
 
 @media (max-width: 640px) {
@@ -327,7 +313,7 @@ button.survey-button {
   .role-item,
   .workEnvironment-item,
   .workShift-item {
-    padding: 12px;
+    padding: 28px;
   }
 
   .role-item p,
@@ -336,23 +322,17 @@ button.survey-button {
     font-size: 15px;
   }
 
-  button.survey-close {
-    width: 60px;
-    height: 28px;
-    font-size: 14px;
-    top: 12px;
-    right: 12px;
-  }
-
   button.survey-submit {
-    width: 85px;
-    height: 36px;
     font-size: 14px;
-    bottom: 70px;
-    right: 20px;
   }
 
   .bx {
     font-size: 18px;
   }
+
+  button.survey-close {
+    margin-top: 30px;
+}
+
+
 }

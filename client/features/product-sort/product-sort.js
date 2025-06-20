@@ -103,7 +103,9 @@ function slideProductList(data) {
     slideEl.className = "swiper-slide";
 
     slideEl.innerHTML = `
-      <figure class="img" style="background-image: url('${item.img}')"></figure>
+      <figure class="img">
+          <img src="${item.img}" alt="상품 이미지">
+      </figure>
       <div class="info">
         <span class="brand">${item.name}</span>
         <p class="txt">${item.txt}</p>
