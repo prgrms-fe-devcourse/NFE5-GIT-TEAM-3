@@ -76,7 +76,7 @@
 ![Image](https://github.com/user-attachments/assets/9f871e53-64b2-4a71-8123-71b8be7a2498)
 ## 📷 미리보기
 ![스크린샷 2025-06-20 170912](https://github.com/user-attachments/assets/74546d07-3046-4e60-a20d-87767194debf)
-![스크린샷 2025-06-20 170922](https://github.com/user-attachments/assets/538d7952-9bdc-4d29-8057-efa69dc82349)
+![image](https://github.com/user-attachments/assets/e7707f1a-d684-4251-b020-b698bc2810eb)
 ![스크린샷 2025-06-20 170958](https://github.com/user-attachments/assets/21f1152f-f5f3-4771-b8d8-b5e35a5ae0d0)
 ![스크린샷 2025-06-20 172646](https://github.com/user-attachments/assets/23eaf3ff-cd47-404c-986f-1c703d45e326)
 ## 👨‍💻 팀원
