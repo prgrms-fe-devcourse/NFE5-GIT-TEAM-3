@@ -98,7 +98,7 @@ function slideProductList(data) {
   const wrapper = slide.querySelector(".swiper-wrapper");
   wrapper.innerHTML = ""; // 기존 슬라이드 초기화
 
-  data.slice(0, 5).forEach((item) => {
+  data.slice(0, 5).forEach(({img, name, txt, likes, price}) => {
     const slideEl = document.createElement("div");
     slideEl.className = "swiper-slide";
 
@@ -107,12 +107,12 @@ function slideProductList(data) {
           <img src="${item.img}" alt="상품 이미지">
       </figure>
       <div class="info">
-        <span class="brand">${item.name}</span>
-        <p class="txt">${item.txt}</p>
-        <span class="price">${item.price.toLocaleString()}원</span>
+        <span aria-label="상품이름 : ${name}" class="brand">${name}</span>
+        <p aria-label="상품설명 : ${txt}" class="txt">${txt}</p>
+        <span aria-label="상품가격 : ${price}" class="price">${price.toLocaleString()}원</span>
         <div class="rating">
           <img class="star" src="features/product-sort/img/star_on.png" alt="평점이미지" />
-          <span>${item.likes.toFixed(1)}</span>
+          <span aria-label="상품평점${likes.toFixed(1)}점">${likes.toFixed(1)}</span>
         </div>
       </div>
     `;
