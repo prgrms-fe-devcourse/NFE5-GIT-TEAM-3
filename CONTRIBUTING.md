@@ -56,3 +56,7 @@ export function renderProductList() {
 들여쓰기는 두 칸 Tab 으로 한다.
 # 줄바꿈 컨벤션
 매개변수가 4개 이상일 경우, 줄바꿈 한다.
+
+# 브랜치 관리 전략
+main과 기능별 브랜치를 따로 만들어서 관리한다.
+예시) feature/developer-survey -> 설문조사 기능 브랜치
