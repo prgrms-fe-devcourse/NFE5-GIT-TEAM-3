@@ -87,5 +87,11 @@
 | FE | FE | FE | FE | FE |
 | [GitHub](https://github.com/jihyun9912) | [GitHub](https://github.com/msshin99) | [GitHub](https://github.com/mintsky0172) | [GitHub](https://github.com/seungdev) | [GitHub](https://github.com/YooJeong01) |
 
+<<<<<<< HEAD
 황유정
 이소민
+=======
+이승은
+황유정
+이소민
+>>>>>>> be9e669c44eaa6902c343cc4fa856635e61d445c
